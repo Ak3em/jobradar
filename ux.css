@@ -31,3 +31,9 @@ label:has(#sp){display:none}
 @media(hover:hover) and (pointer:fine){.keys{display:block}}
 .tri-empty{margin:auto;text-align:center;display:grid;gap:10px;justify-items:center;color:var(--muted)}.tri-empty b{color:var(--fg);font-size:22px}
 @media(prefers-reduced-motion:reduce){.card.enter{animation:none;opacity:1}.pipe i{transition:none}}
+#refreshBtn{display:inline-flex;align-items:center;gap:6px}
+#refreshBtn:disabled{opacity:.55}
+#refreshBtn.spin svg{animation:uxspin 1s linear infinite}
+@keyframes uxspin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#refreshBtn.spin svg{animation:none}}
+.tools .btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none}
