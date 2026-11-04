@@ -1,0 +1,10 @@
+{
+  "min_score": 3.5,
+  "max_age_days": 60,
+  "flag_age_days": 30,
+  "gemini_model": "gemini-2.5-flash",
+  "max_new_scores_per_run": 40,
+  "seconds_between_scores": 6,
+  "verify_links": true,
+  "exclude_locations": ["London", "India", "Bangalore", "Bengaluru", "Singapore", "Hong Kong", "Toronto", "Dublin", "Warsaw", "Tokyo", "Sydney", "Berlin", "Paris", "Mumbai", "Hyderabad", "Gurgaon", "Poland", "Canada", "UK", "Ireland", "Germany", "Brazil", "Mexico"]
+}
