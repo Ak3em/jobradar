@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-04T19:36:08.016984+00:00",
+ "generated_at": "2026-11-04T22:04:05.227010+00:00",
  "min_score": 3.5,
  "health": {
   "Stripe": {
-   "fetched": 755,
+   "fetched": 757,
    "kept": 1,
    "error": null
   },
   "Robinhood": {
-   "fetched": 159,
+   "fetched": 158,
    "kept": 1,
    "error": null
   },
   "Coinbase": {
-   "fetched": 278,
+   "fetched": 279,
    "kept": 5,
    "error": null
   },
@@ -23,17 +23,17 @@
    "error": null
   },
   "Airbnb": {
-   "fetched": 210,
+   "fetched": 207,
    "kept": 0,
    "error": null
   },
   "Databricks": {
-   "fetched": 929,
+   "fetched": 927,
    "kept": 3,
    "error": null
   },
   "Anthropic": {
-   "fetched": 682,
+   "fetched": 681,
    "kept": 3,
    "error": null
   },
@@ -43,8 +43,8 @@
    "error": null
   },
   "Ramp": {
-   "fetched": 166,
-   "kept": 1,
+   "fetched": 169,
+   "kept": 2,
    "error": null
   },
   "Notion": {
@@ -80,7 +80,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-anthropic-5462893008",
@@ -108,7 +108,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-databricks-8886944002",
@@ -136,7 +136,35 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+  },
+  {
+   "id": "ab-ramp-b6132946-62e7-4ed4-9b93-f7cbe0e2c1fe",
+   "title": "Fraud Operations Specialist",
+   "url": "https://jobs.ashbyhq.com/ramp/b6132946-62e7-4ed4-9b93-f7cbe0e2c1fe",
+   "location": "New York, NY (HQ)",
+   "posted": "2026-11-04T20:58:36.946+00:00",
+   "desc": "ABOUT RAMP Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $275B in annualized spend flows in and out of 85,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books. The problems are high-stakes, data-dense, and unforgiving. We hire people with high agency and high urgency. We look for slope over intercept. We care less about where you trained and more about what you\u2019ve built. At Ramp, everyone is a builder who owns problems end to end and makes consequential decisions that shape the outcome. The median Ramp customer saves 7.5% and grows revenue 16% in their first year \u2013 far in excess of businesses operating without Ramp. We believe every ambitious company deserves the same. If you want to build systems that directly shape how companies move and manage billions, Ramp is the place to do it. ABOUT THE ROLE As a member of Ramp's Fraud Operations team, you will play a pivotal role in safeguarding the company and its customers against fraudulent activities. This position involves analyzing new account applications, monetary and non-monetary account activity to identify and mitigate risks associated with first-party and third-party fraud. We are seeking a detail-oriented professional who is adept at applying fraud detection techniques and leveraging data sources and tools to develop logical courses of action. In addition to technical acumen, this role requires strong interpersonal and communication skills to interact effectively cross-functionally and with customers, external financial institutions, and law enforcement agencies. Ideal candidates are self-starters who are energized by ambiguity and love creating clarity. WHAT YOU'LL DO - Analyze new account applications to detect potential fraud patterns, including identity theft, synthetic identities, and other high-risk behaviors. - Evaluate transactional activity, identifying anomalies and irregularities indicative of fraudulent behavior. - Thoroughly investigate alerts of first-party and third-party fraud, providing comprehensive documentation of findings. - Investigate and facilitate customer card disputes, ensuring cases are resolved accurately and within network timelines. - Use AI tools and automation to streamline investigations, and help develop and improve the processes and tooling behind them. - Collaborate with internal teams, such as Credit Risk, Compliance, and Customer Support, to ensure timely resolution of fraud-related issues. - Communicate directly with customers to verify account activity, resolve disputes, and gather necessary documentation during investigations. - Liaise with external stakeholders, including financial institutions and law enforcement, to support investigations and facilitate recovery efforts when necessary. - Stay updated on emerging fraud trends, industry best practices, and regulatory requirements to enhance fraud prevention and",
+   "company": "Ramp",
+   "family": "ops",
+   "age_days": 0,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [],
+   "source": "ashby:ramp",
+   "score": 2.5,
+   "matches": [
+    "Mentions python",
+    "Mentions sql"
+   ],
+   "gaps": [],
+   "actions": [],
+   "score_method": "keywords",
+   "first_seen": "2026-11-04T22:04:05.227010+00:00",
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-anthropic-5397704008",
@@ -147,7 +175,7 @@
    "desc": "About Anthropic Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems. About the role The Security Risk team is responsible for how Anthropic identifies, prioritizes, and drives treatment of its most important security risks. We are rebuilding risk management to operate as an engineering function, using automation, quantitative risk and AI-native platforms to enable decision making. The risks we assess span Anthropic's full security landscape, so the team needs breadth across domains and the judgment to go deep wherever a decision demands it. Security Risk, in deep partnership with Security Engineering, helps define the security program and shapes how investment and treatment decisions get made. The conventional GRC playbook was not built for a company shipping frontier AI. You will help define what replaces it, with a direct line to CISO-level decisions. As a Security Risk Analyst you will take risk questions from leadership and partner teams and drive them to a decision. Sometimes that is a fast, structured qualitative assessment and other times it is a deep FAIR-based quantitative analysis. Either way you bring leadership a clear position, the tradeoffs, and honest uncertainty, and you defend it under challenge. In parallel, you will help turn quantitative risk into a product partner teams can leverage, and define the standards a growing risk function will run on. Key responsibilities Enable leadership and partner teams to make risk-informed decisions. Take ambiguous risk questions, drive them to a documented decision, and communicate the quantitative and qualitative tradeoffs clearly Lead quantitative analysis of the company's top security risk scenarios using FAIR, calibrated estimation, and simulation, working with the engineers who own the systems and presenting results in terms leadership can act on Partner with Security Engineering to assess threat scenarios and control effectiveness so security investment is right-sized to actual risk and remediation is sequenced where it buys down the most risk Frame escalations and risk treatment decisions with a clear recommendation, an honest statement of uncertainty, and re-evaluation triggers, and pressure test those decisions with risk owners Shape the analysis and narrative behind leadership risk reviews, and help define risk appetite and the risk metrics the organization should measure and why Use AI and automation to scale risk analysis, and own the calibration and quality review that keep the outputs trustworthy Turn one-off analyses into reusable methods, templates, and training so risk analysis becomes increasingly self service for partner teams, and raise the analytical quality of the risk register You may be a good fit if you ",
    "company": "Anthropic",
    "family": "swe",
-   "age_days": 29,
+   "age_days": 30,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "yes",
@@ -164,7 +192,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-coinbase-8233945",
@@ -194,7 +222,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-coinbase-8250032",
@@ -205,14 +233,14 @@
    "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . We're hiring a Finance &amp; Strategy Analyst to join the Product Finance FP&amp;A team and own the financial story behind some of Coinbase's most dynamic revenue lines, including Consumer Trading, Developer, and Stablecoin products. This team provides forecasting, variance analysis, and strategic insights across all revenue and expense lines for the product groups, partnering cross-functionally with Business Operations, Data, Accounting, Treasury, Investor Relations, and HR. You'll build the models and deliver the analysis that help leadership understand what's driving performance, where the risks and opportunities are, and where to focus next. What you'll do: Own Consumer Trading revenue forecasting and variance analysis, reconciling actuals against forecast on a monthly cadence Manage end-to-end financial deliverables for Developer and Stablecoin products, covering both revenue forecasting and OpEx budget tracking Build and maintain the driver-based financial models that power analysis across Trading, Developer, and Stablecoin revenue and expense lines Investigate financial and operational data proactively to surface trends, anomalies, and opportunities before they're asked for Lead the month-end close process for your coverage areas, conducting detailed variance analysis and partnering with Accounting to ensure data integrity Present financial analysis during business reviews, translating complex data into clear recommendations for cross-functional stakeholders Required Skills and Experience: 2-4 years of experience in FP&amp;A, strategic finance, or a related analytical role, with demonstrated ability to build driver-based revenue and expense models independently Technical proficiency in advanced Excel and SQL for data analysis, with exposure to planning tools such as Anaplan, NetSuite, or Adaptive Insights Experience partnering with non-finance stakeholders (e.g., Product, Engineering, Operations) to validate assumptions, gather inputs, and present financial analysis Track record of independently identifying financial trends or risks and escalating insights to leadership without being prompted Proven accuracy in financial close processes, variance analysis, or reconciliation workflows Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cos",
    "company": "Coinbase",
    "family": "ops",
-   "age_days": 32,
+   "age_days": 33,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "likely",
     "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
    },
    "flags": [
-    "Posted 32 days ago"
+    "Posted 33 days ago"
    ],
    "source": "greenhouse:coinbase",
    "score": 2.5,
@@ -224,7 +252,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-databricks-8863326002",
@@ -254,7 +282,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-anthropic-5416829008",
@@ -284,7 +312,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-stripe-8202299",
@@ -311,7 +339,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-coinbase-8248775",
@@ -340,7 +368,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-coinbase-8281622",
@@ -365,7 +393,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-robinhood-8226972",
@@ -376,7 +404,7 @@
    "desc": "Join us in building the future of finance. Our mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you\u2019re ready to be at the epicenter of this historic cultural and financial shift, keep reading. About the team + role We are building an elite team, applying frontier technologies to the world's biggest financial problems. We're looking for bold thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn't a place for complacency, it's where ambitious people do the best work of their careers. We're a high-performing, fast-moving team with ethics at the center of everything we do. Expectations are high, and so are the rewards. The Fraud Investigations team helps protect customers and the platform by reviewing suspicious activity, confirming what happened, and taking action to reduce risk. As a Fraud Investigation Analyst, you\u2019ll review fraud alerts, analyze transactional and behavioral signals, and document outcomes in line with internal policy and regulatory requirements. You\u2019ll also route higher-risk cases to the right partners and help limit customer impact through timely, accurate investigations\u2014your work directly supports trust and safety across Robinhood! This role is based in our Denver, CO and Westlake, TX office(s), with in-person attendance expected at least 3 days per week. At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community. Our office experience is intentional, energizing, and designed to fully support high-performing teams. Shifts Available: 10:30am-7pm (local time)&nbsp; Days off: Wednesday/Thursday 6am-2:30pm (local time) Days off: Tuesday/Wednesday&nbsp; What you'll do Review and investigate fraud alerts to assess potential fraudulent activity using common fraud patterns and investigation steps Analyze transactional and behavioral data to make risk-based decisions and complete clear, well-supported case documentation Manage daily alert and case volume to meet quality and service-level targets Partner with product, engineering, legal, compliance, vendor partners, and financial crime teams to gather information and escalate cases when needed Identify recurring fraud trends and suggest specific process improvements based on investigation outcomes What you bring 0\u20132 years of experience in fraud investigations or related financial crime, risk, compliance, or operations work, with exposure to account takeovers, identity theft, or money movement fraud Clear written documentation skills and the ability to explain decisions using evidence from account activity Strong attention to detail and comfort working with multiple data points (transactions, device signals, behavioral indicators) Ability to prioritize work, manage queue volume, and meet defined quality and productivity goals Strong collaboration",
    "company": "Robinhood",
    "family": "ops",
-   "age_days": 13,
+   "age_days": 14,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "likely",
@@ -390,7 +418,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "ab-ramp-7e531974-caac-46a2-804e-c6c3140bfda4",
@@ -415,7 +443,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "ab-notion-92de7ece-b7d9-4b2a-b9cb-b978cc690a46",
@@ -426,14 +454,14 @@
    "desc": "WHO WE ARE Notion is the collaborative AI workspace where teams and agents think together https://www.youtube.com/watch?v=vkpYpWfEK5s. We're building one place where your knowledge, projects, meetings, and AI tools live side by side, so work is faster, clearer, and less fragmented. Millions of individuals, small teams, and large companies run their work on Notion. Notinos (our employees) are customer zero in bringing this future of work to life. We care about craft, building things that last, and the belief that great work is still fundamentally human. Our goal isn\u2019t to ship the next feature. Each and every team of Notinos is working to set the standard for how humans work together in the AI era. From building a business\u2019s system of record to making and managing AI agents to automating away the busy work, we care deeply about giving our customers more time for their life\u2019s work. ABOUT THE ROLE: As a Payroll Analyst on our Accounting team, you\u2019ll manage accurate, on-time U.S. payrolls and provide operational coverage for the payroll team. In this role, you\u2019ll help keep a fast-growing workforce compliant and dependable while improving the systems and workflows that make payroll seamless for employees. You\u2019ll partner closely with the Accounting, People Ops, and Benefits teams to refine existing processes and systems in a fast-changing environment. Expect hands-on processing, ongoing improvements, and accountability for precision and employee trust. This role can be based in either San Francisco or New York City. We work from our offices on Mondays, Tuesdays and Thursdays (our Anchor Days) because we do our best thinking and building together in person. We\u2019re looking for someone who\u2019s excited to work alongside the team during those days. WHAT YOU'LL ACHIEVE: - Manage and reconcile all bi-weekly, quarterly (commissions), and off cycle payrolls using Workday for employees in the United States - Own and administer the Workday Time Tracking module for all non-exempt hourly employees to ensure timecards are accurately submitted and approved on time - Process all leave of absence amounts, fringe benefits (e.g. Carrot and BenePass), equity transactions, and 401K/Roth contributions using Fidelity - Liaise with the ADP support team to ensure the accuracy and timely processing of garnishments, taxes, and net pay - Collaborate closely with the People team, Finance team, and external payroll partners to identify and improve payroll workflows - Provide excellent employee experience as the first point of contact for all U.S. payroll inquires - Ability to generate and analyze payroll reports using Workday - Reconcile and prepare month end U.S. payroll journal entries - Assist with balance sheet reconciliations - Serve as additional support to the Senior Payroll Analyst - Complete ad-hoc tasks and other duties as assigned SKILLS YOU'LL NEED TO BRING: - 4+ years of U.S. payroll processing experience for mid-market / scaling enterprises - 2+ years of experience with W",
    "company": "Notion",
    "family": "ops",
-   "age_days": 32,
+   "age_days": 33,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "likely",
     "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
    },
    "flags": [
-    "Posted 32 days ago"
+    "Posted 33 days ago"
    ],
    "source": "ashby:notion",
    "score": 1.0,
@@ -442,7 +470,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   },
   {
    "id": "gh-databricks-8802705002",
@@ -469,7 +497,7 @@
    "actions": [],
    "score_method": "keywords",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T19:36:08.016984+00:00"
+   "last_seen": "2026-11-04T22:04:05.227010+00:00"
   }
  ]
 }
