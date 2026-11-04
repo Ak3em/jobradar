@@ -1,0 +1,22 @@
+name: design-check
+# Manual run. Set a repository variable SITE_URL (Settings > Secrets and variables > Actions > Variables)
+# to your Pages URL, then run this workflow after a deploy.
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: |
+          npm i dembrandt
+          npx playwright-core install --with-deps chromium
+      - run: npx dembrandt "${{ vars.SITE_URL }}" --tokens design/tokens-light.json --tokens design/tokens-dark.json --max-off-token 10 --tokens-report design-report.md --no-sandbox
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: design-report
+          path: design-report.md
