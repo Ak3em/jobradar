@@ -1,0 +1,3 @@
+{"color":{"$type":"color","bg":{"$value":"#0a1620"},"card":{"$value":"#102230"},"fg":{"$value":"#e6f1f8"},"muted":{"$value":"#9db3c4"},"border":{"$value":"#23415a"},"primary":{"$value":"#38bdf8"},"on-primary":{"$value":"#04202e"},"soft":{"$value":"#16303f"},"sponsors":{"$value":"#4ade80"},"likely":{"$value":"#7dd3fc"},"unclear":{"$value":"#fbbf24"},"no-sponsor":{"$value":"#f87171"}},
+ "radius":{"$type":"dimension","card":{"$value":"10px"},"pill":{"$value":"99px"}},
+ "fontSize":{"$type":"dimension","xs":{"$value":"12px"},"sm":{"$value":"13px"},"md":{"$value":"14px"},"base":{"$value":"16px"},"lg":{"$value":"18px"},"xl":{"$value":"22px"},"2xl":{"$value":"24px"}}}
