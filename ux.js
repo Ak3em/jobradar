@@ -2,6 +2,28 @@
 (() => {
   const baseRender = render, REDUCE = matchMedia("(prefers-reduced-motion: reduce)"), EASE = "cubic-bezier(0.23,1,0.32,1)";
   let built = false, lastKey = "";
+
+  /* One-time: rescue v2 tracker ("jr2") statuses into v1 ("jr") shape. */
+  try {
+    const v2 = JSON.parse(localStorage.getItem("jr2") || "null");
+    if (v2 && v2.schema === 2 && v2.jobs && typeof v2.jobs === "object") {
+      const v1 = JSON.parse(localStorage.getItem("jr") || "{}");
+      let changed = false;
+      for (const [id, j] of Object.entries(v2.jobs)) {
+        if (!j || typeof j !== "object" || j.custom) continue;
+        const cur = v1[id] || {}, had = (j.history || []).length > 0;
+        if (j.status) {
+          if (cur.status !== j.status || (cur.missing || "") !== (j.missing || "")) {
+            v1[id] = {status: j.status};
+            if (j.missing) v1[id].missing = j.missing;
+            changed = true;
+          }
+        } else if (had && v1[id]) { delete v1[id]; changed = true; }
+      }
+      if (changed) localStorage.setItem("jr", JSON.stringify(v1));
+      localStorage.removeItem("jr2");
+    }
+  } catch {}
   const absDate = j => new Date(new Date(data.generated_at) - j.age_days * 864e5).toLocaleDateString(undefined, {month: "short", day: "numeric"});
 
   function build(){
@@ -13,7 +35,31 @@
     });
     document.querySelector(".filters").before(seg);
     const pipe = document.createElement("div"); pipe.id = "pipe"; pipe.className = "pipe"; $("stats").after(pipe);
-    const t = document.createElement("button"); t.id = "triageBtn"; t.innerHTML = ic("feed") + "Triage mode"; t.onclick = openTriage; $("export").before(t);
+    const t = document.createElement("button"); t.id = "triageBtn"; t.innerHTML = ic("feed") + "Triage mode"; t.onclick = openTriage;
+    const r = document.createElement("button"); r.id = "refreshBtn"; r.type = "button";
+    r.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg><span>Refresh</span>';
+    r.setAttribute("aria-label", "Refresh job listings"); r.onclick = doRefresh;
+    const s = document.createElement("a"); s.className = "btn"; s.target = "_blank"; s.rel = "noopener";
+    s.href = "https://github.com/Ak3em/jobradar/actions/workflows/scan.yml";
+    s.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Run scan</span>';
+    s.setAttribute("aria-label", "Run a new scan (opens GitHub Actions)");
+    $("export").before(r); $("export").before(s); $("export").before(t);
+  }
+
+  async function doRefresh(){
+    const b = $("#refreshBtn"); if (!b || b.disabled) return; b.disabled = true; b.classList.add("spin");
+    try {
+      const d = await fetch(`data/jobs.json?t=${Date.now()}`, {cache: "no-store"}).then(x => { if (!x.ok) throw 0; return x.json(); });
+      const old = new Set((data.jobs || []).map(j => j.id));
+      data = d;
+      $("sub").textContent = `Last scan ${new Date(d.generated_at).toLocaleString()}, ${d.jobs.length} jobs found`;
+      $("banner").innerHTML = d.sample ? `<div class="banner">Sample data. Run the scan workflow to load real jobs.</div>` : "";
+      $("min").innerHTML = [5, 4.5, 4, 3.5, 3, 2.5, 1].map(v => `<option ${v === (d.min_score || 3.5) ? "selected" : ""}>${v}</option>`).join("");
+      render();
+      const added = d.jobs.filter(j => !old.has(j.id)).length;
+      toast(added ? `${added} new job${added > 1 ? "s" : ""} since last refresh` : "Already up to date");
+    } catch { toast("Couldn't refresh. Check your connection and try again."); }
+    finally { b.disabled = false; b.classList.remove("spin"); }
   }
 
   function enhance(){
