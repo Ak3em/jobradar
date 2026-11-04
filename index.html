@@ -1,17 +1,79 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#F5F4EF" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
 <title>JobRadar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Instrument+Serif&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/tokens.css"><link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f0f9ff;--card:#fff;--fg:#0c4a6e;--muted:#475569;--border:#bae6fd;--primary:#0369a1;--on-primary:#fff;--soft:#e7eff5;
+--yes:#15803d;--likely:#0369a1;--unclear:#a16207;--no:#b91c1c;--r:10px;--font:"Fira Sans",system-ui,sans-serif;--mono:"Fira Code",ui-monospace,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0a1620;--card:#102230;--fg:#e6f1f8;--muted:#9db3c4;--border:#23415a;--primary:#38bdf8;--on-primary:#04202e;--soft:#16303f;
+--yes:#4ade80;--likely:#7dd3fc;--unclear:#fbbf24;--no:#f87171}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 var(--font);padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+.wrap{max-width:880px;margin:0 auto;padding:16px}
+h1{font-size:24px;margin:4px 0 0;line-height:1.2}.sub{color:var(--muted);margin:2px 0 12px;font-size:14px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:8px 14px;flex:1 1 140px}
+.stat b{font:600 22px var(--mono);display:block}.stat span{color:var(--muted);font-size:13px}
+.banner{background:var(--soft);border:1px solid var(--unclear);border-radius:var(--r);padding:10px 14px;margin-bottom:12px;font-weight:500}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:6px}
+label{display:flex;flex-direction:column;font-size:13px;font-weight:500;color:var(--muted);gap:3px}
+select,button,.btn{font:inherit;min-height:44px;border-radius:var(--r);border:1px solid var(--border);background:var(--card);color:var(--fg);padding:0 12px;cursor:pointer;transition:background-color .15s,border-color .15s}
+@media(hover:hover) and (pointer:fine){select:hover,button:hover,.btn:hover{border-color:var(--primary)}}
+.tools{display:flex;gap:8px;margin:8px 0 14px}.tools button{display:flex;align-items:center;gap:6px}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:repeat(5,1fr);background:var(--card);border-top:1px solid var(--border);padding-bottom:env(safe-area-inset-bottom)}
+nav button{border:0;border-radius:0;min-height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:12px;font-weight:500;color:var(--muted);background:transparent}
+nav button[aria-current=page]{color:var(--primary);font-weight:700;box-shadow:inset 0 3px 0 var(--primary)}
+nav .n{font-family:var(--mono);font-size:12px}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--c);border-radius:var(--r);padding:14px 16px;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.co{font-weight:600;margin-right:10px}.loc{color:var(--muted);font-size:14px}
+.ti{font-size:18px;font-weight:600;line-height:1.3;margin:2px 0 6px}
+.spon{display:flex;gap:8px;align-items:flex-start;color:var(--c)}.spon b{font-weight:700}.spon .ic{margin-top:3px;flex:none}
+.why{color:var(--muted);font-size:14px;display:block;font-weight:400}
+.ring{position:relative;width:52px;height:52px;flex:none}.ring svg{transform:rotate(-90deg)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:600 15px var(--mono)}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tag{background:var(--soft);border-radius:99px;padding:2px 10px;font-size:13px;color:var(--fg)}.tag.warn{background:transparent;border:1px solid var(--unclear);color:var(--unclear);display:flex;gap:4px;align-items:center}
+details{margin:6px 0}summary{cursor:pointer;color:var(--primary);font-weight:500;min-height:32px;display:flex;align-items:center}
+details ul{margin:4px 0 6px;padding-left:20px}details li.gap{color:var(--muted)}
+.miss{background:var(--soft);border-radius:var(--r);padding:8px 12px;margin:8px 0;font-size:14px}
+.act{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.act button,.act .btn{display:flex;align-items:center;justify-content:center;gap:6px;font-weight:500}
+.act button[aria-pressed=true]{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+.act .btn{grid-column:1/-1;background:var(--fg);color:var(--bg);border-color:var(--fg);text-decoration:none;font-weight:600}
+.empty{text-align:center;padding:36px 12px;color:var(--muted)}.empty b{display:block;color:var(--fg);font-size:18px;margin-bottom:4px}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom));background:var(--fg);color:var(--bg);border-radius:var(--r);padding:6px 8px 6px 14px;display:none;gap:10px;align-items:center;z-index:9;max-width:92vw}
+#toast.on{display:flex}#toast button{min-height:36px;background:transparent;color:var(--bg);border-color:var(--bg)}
+dialog{border:1px solid var(--border);border-radius:var(--r);background:var(--card);color:var(--fg);max-width:480px;width:92vw;padding:18px}
+dialog::backdrop{background:rgba(0,0,0,.5)}dialog h2{margin:0 0 10px;font-size:18px}
+textarea{width:100%;min-height:90px;font:inherit;border-radius:var(--r);border:1px solid var(--border);background:var(--bg);color:var(--fg);padding:10px}
+.dact{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}.dact .p{background:var(--primary);color:var(--on-primary);border-color:var(--primary);font-weight:600}
+.hl{list-style:none;padding:0;margin:0}.hl li{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)}.hl .bad{color:var(--no)}.hl .ok{color:var(--yes)}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+@media(min-width:720px){body{padding-bottom:24px}
+ nav{position:static;max-width:880px;margin:0 auto;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;padding:0}
+ nav button{flex-direction:row;gap:8px;font-size:15px}
+ #toast{bottom:24px}.act{display:flex}.act .btn{margin-left:auto;grid-column:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><link rel="stylesheet" href="ux.css">
+<meta name="theme-color" content="#f0f9ff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0a1620" media="(prefers-color-scheme: dark)">
 </head><body>
-<header class="bar"><div><b class="brand">JobRadar</b><span id="scan" class="muted"></span></div>
-<div class="acts" style="margin:0"><button class="btn" data-a="add" aria-label="Add a job">+<span>Add job</span></button><button class="btn" id="refresh" data-a="refresh" aria-label="Refresh jobs"></button></div></header>
-<nav id="nav" aria-label="Sections"></nav>
-<main id="app" class="wrap" aria-live="polite"></main>
-<div id="toast" role="status"><span id="tmsg"></span><button class="btn" id="undo">Undo</button></div>
+<div class="wrap">
+ <h1>JobRadar</h1><p class="sub" id="sub">Loading scan results</p>
+ <div id="banner"></div><div class="stats" id="stats"></div>
+</div>
+<div class="wrap" style="padding-top:0"><nav id="tabs" aria-label="Job status"></nav></div>
+<div class="wrap">
+ <div class="filters">
+  <label>Minimum match <select id="min"></select></label>
+  <label>Role <select id="fam"><option value="">All roles</option><option value="swe">Software</option><option value="pm">Product / Program</option><option value="ops">Operations</option></select></label>
+  <label>Sponsorship <select id="sp"><option value="hide">Hide "does not sponsor"</option><option value="yes">Sponsors or likely sponsors</option><option value="all">Show everything</option></select></label>
+ </div>
+ <div class="tools"><button id="export"></button><button id="health"></button></div>
+ <main id="list" aria-live="polite"></main>
+</div>
+<div id="toast" role="status"><span id="tmsg"></span><button id="undo">Undo</button></div>
 <dialog id="dlg"></dialog>
-<script type="module" src="app.js"></script>
-</body></html>
+<script src="app.js"></script><script src="ux.js"></script></body></html>
