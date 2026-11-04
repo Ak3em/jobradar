@@ -96,7 +96,7 @@ def fallback_score(desc):
 
 def gemini_score(j, key):
     prompt = ("Score how well this candidate fits this job from 1 to 5 in 0.5 steps. Be strict and honest. "
-              "Return JSON only: {\"score\": number, \"matches\": [two short strings], \"gaps\": [up to three short strings]}.\n\n"
+              "Return JSON only: {\"score\": number, \"matches\": [two short strings], \"gaps\": [up to three short strings], \"actions\": [one concrete next step per gap, same order]}.\n\n"
               f"CANDIDATE:\n{json.dumps(PROFILE)}\n\nJOB: {j['title']} at {j['company']}\n{j['desc'][:6000]}")
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{S['gemini_model']}:generateContent"
     body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}}
@@ -105,7 +105,7 @@ def gemini_score(j, key):
         if r.status_code == 429 and attempt == 0: time.sleep(35); continue
         r.raise_for_status(); break
     out = json.loads(r.json()["candidates"][0]["content"]["parts"][0]["text"])
-    return float(out["score"]), out.get("matches", []), out.get("gaps", [])
+    return float(out["score"]), out.get("matches", []), out.get("gaps", []), out.get("actions", [])
 
 def main():
     old = load(DATA / "jobs.json") if (DATA / "jobs.json").exists() else {"jobs": []}
@@ -133,14 +133,14 @@ def main():
         if not c or c["hash"] != h:
             if key and new_scores < S["max_new_scores_per_run"]:
                 try:
-                    s, m, g = gemini_score(j, key); new_scores += 1; time.sleep(S["seconds_between_scores"])
-                    c = {"hash": h, "score": s, "matches": m, "gaps": g, "method": "gemini"}
+                    s, m, g, a = gemini_score(j, key); new_scores += 1; time.sleep(S["seconds_between_scores"])
+                    c = {"hash": h, "score": s, "matches": m, "gaps": g, "actions": a, "method": "gemini"}
                 except Exception as e:
                     print("Scoring error:", e, file=sys.stderr)
             if not c or c["hash"] != h:
                 s, m, g = fallback_score(j["desc"]); c = {"hash": h, "score": s, "matches": m, "gaps": g, "method": "keywords"}
             cache[j["id"]] = c
-        j.update(score=c["score"], matches=c["matches"], gaps=c["gaps"], score_method=c["method"])
+        j.update(score=c["score"], matches=c["matches"], gaps=c["gaps"], actions=c.get("actions", []), score_method=c["method"])
         j["first_seen"] = first_seen.get(j["id"]) or NOW.isoformat()
         j["last_seen"] = NOW.isoformat()
         j["desc"] = j["desc"][:3000]
