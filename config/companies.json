@@ -1,12 +1,62 @@
 [
-  {"name": "Stripe", "ats": "greenhouse", "slug": "stripe", "h1b": "yes"},
-  {"name": "Robinhood", "ats": "greenhouse", "slug": "robinhood", "h1b": "yes"},
-  {"name": "Coinbase", "ats": "greenhouse", "slug": "coinbase", "h1b": "yes"},
-  {"name": "Figma", "ats": "greenhouse", "slug": "figma", "h1b": "yes"},
-  {"name": "Airbnb", "ats": "greenhouse", "slug": "airbnb", "h1b": "yes"},
-  {"name": "Databricks", "ats": "greenhouse", "slug": "databricks", "h1b": "yes"},
-  {"name": "Anthropic", "ats": "greenhouse", "slug": "anthropic", "h1b": "yes"},
-  {"name": "Plaid", "ats": "lever", "slug": "plaid", "h1b": "yes"},
-  {"name": "Ramp", "ats": "ashby", "slug": "ramp", "h1b": "yes"},
-  {"name": "Notion", "ats": "ashby", "slug": "notion", "h1b": "yes"}
+  {
+    "name": "Stripe",
+    "ats": "greenhouse",
+    "slug": "stripe",
+    "h1b": "yes"
+  },
+  {
+    "name": "Robinhood",
+    "ats": "greenhouse",
+    "slug": "robinhood",
+    "h1b": "yes"
+  },
+  {
+    "name": "Coinbase",
+    "ats": "greenhouse",
+    "slug": "coinbase",
+    "h1b": "yes"
+  },
+  {
+    "name": "Figma",
+    "ats": "greenhouse",
+    "slug": "figma",
+    "h1b": "yes"
+  },
+  {
+    "name": "Airbnb",
+    "ats": "greenhouse",
+    "slug": "airbnb",
+    "h1b": "yes"
+  },
+  {
+    "name": "Databricks",
+    "ats": "greenhouse",
+    "slug": "databricks",
+    "h1b": "yes"
+  },
+  {
+    "name": "Anthropic",
+    "ats": "greenhouse",
+    "slug": "anthropic",
+    "h1b": "yes"
+  },
+  {
+    "name": "Plaid",
+    "ats": "ashby",
+    "slug": "plaid",
+    "h1b": "yes"
+  },
+  {
+    "name": "Ramp",
+    "ats": "ashby",
+    "slug": "ramp",
+    "h1b": "yes"
+  },
+  {
+    "name": "Notion",
+    "ats": "ashby",
+    "slug": "notion",
+    "h1b": "yes"
+  }
 ]
