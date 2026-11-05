@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-04T22:04:05.227010+00:00",
+ "generated_at": "2026-11-05T10:12:52.494030+00:00",
  "min_score": 3.5,
  "health": {
   "Stripe": {
-   "fetched": 757,
+   "fetched": 761,
    "kept": 1,
    "error": null
   },
   "Robinhood": {
-   "fetched": 158,
+   "fetched": 154,
    "kept": 1,
    "error": null
   },
   "Coinbase": {
-   "fetched": 279,
+   "fetched": 278,
    "kept": 5,
    "error": null
   },
@@ -23,7 +23,7 @@
    "error": null
   },
   "Airbnb": {
-   "fetched": 207,
+   "fetched": 208,
    "kept": 0,
    "error": null
   },
@@ -38,105 +38,140 @@
    "error": null
   },
   "Plaid": {
-   "fetched": 141,
+   "fetched": 144,
    "kept": 0,
    "error": null
   },
   "Ramp": {
-   "fetched": 169,
+   "fetched": 171,
    "kept": 2,
    "error": null
   },
   "Notion": {
-   "fetched": 146,
+   "fetched": 148,
    "kept": 1,
    "error": null
   }
  },
+ "scoring": {
+  "scorer": "groq",
+  "scored": 16,
+  "errors": 0,
+  "last_error": null,
+  "note": null
+ },
  "jobs": [
   {
-   "id": "gh-coinbase-8351568",
-   "title": "Prime Financing Trading Analyst",
-   "url": "https://www.coinbase.com/careers/positions/8351568?gh_jid=8351568",
-   "location": "Remote - USA",
-   "posted": "2026-11-04T14:00:20-05:00",
-   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . As a Prime Financing Trading Analyst on the Institutional Prime Finance team, you'll help manage and grow Coinbase's institutional financing book across lending, margin, and shorting products. This team is building a full-service prime brokerage platform that enables institutions to deploy trading strategies and achieve capital efficiency at scale. You'll trade day-to-day across the financing desk, optimize net interest margin, and work directly with hedge funds, ETF issuers, market makers, and corporates to deliver bespoke financing solutions. What you'll do: Trade the financing book daily, managing long and short side liquidity across Prime Financing and CB Institutional products. Optimize net interest margin on principal borrow/lend activity through active position management and pricing adjustments. Support asset and client pricing for financing implementation across lending, margin, and shorting products. Engage directly with institutional clients, including hedge funds, ETF issuers, market makers, UHNW individuals, and corporates, to structure financing solutions. Build and refine custom client solutions that improve onboarding, internal processes, and overall client experience. Required Skills and Experience: 2+ years of experience in equity or fixed income financing, prime brokerage, or derivatives at a bank, broker-dealer, or crypto exchange. Proficiency in Python, SQL, or similar programming languages applied to trading analytics, pricing models, or data analysis. Demonstrated knowledge of fiat and crypto funding market fundamentals, including repo, securities lending, and margin financing mechanics. Proven ability to communicate clearly with institutional clients and internal stakeholders while managing competing priorities with urgency. Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality. Pay Transparency Notice: Base salary varies by location (see range below). Total compensation may also include equity and bonus eligibility, and benefits (medical, dental, vision, 401(k)).&nbsp; &nbsp; Annual base salary range (excluding equity and bonus): $126,990 &mdash; $149,400 USD Application Limit: Candidates may submit a maximum of 3 applications within a 6-month period. Equal Opportunity Employer: Coinbase is an Equal Oppor",
-   "company": "Coinbase",
-   "family": "ops",
-   "age_days": 0,
-   "grad_year": "unspecified",
+   "id": "gh-databricks-8863326002",
+   "title": "Product Manager, New Grad (2027) - Belgrade",
+   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8863326002",
+   "location": "Belgrade, Serbia",
+   "posted": "2026-10-02T10:38:42-04:00",
+   "desc": "P-1453 At Databricks, we are passionate about helping data teams solve the world's toughest problems \u2014 from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business. As an Associate Product Manager, you will join a team that works diligently to understand and solve our customers\u2019 most challenging problems. We're hiring across all of our teams, including AI Platform, Genie, Machine Learning, Unity Catalog, Databricks SQL, ETL, Streaming, and EDA. As part of our 2027 APM cohort, you will have a dedicated manager and mentor as well as connect with product managers, engineers, designers, account teams, other interns, and leaders from across the company. We are hiring for Amsterdam, Belgrade and Berlin. The impact you will have: Deeply understand customer problem space and establish the rails for viable solution space Prototype and test early ideas with customers and engineers to validate direction before the team commits to a build Work with engineers and designers to ship features on the Databricks platformWork with a team to build features for the Databricks platform Own your project end-to-end \u2014 design, build, launch, and iterate on feedbackManage your project end-to-end, including design, code, launch and feedback Build with scale, quality, and security in mind from day oneLearn about building a platform that scales quickly while maintaining quality and security What we look for: You will graduate in Fall 2026 or Spring 2027 with a bachelors or masters degree in computer science or related engineering practice Pursuing a bachelor's or master's in computer science or a related engineering field You've used AI tooling for both personal productivity and development projects You have some first hand experience with SQL and/or Python You're hands-on and learn by doing \u2014 happy to build, test, and iterate your way to an answer You use analytical skills to make data-driven decisions (e.g. analyzing product usage) You can make complex topics simple and communicate nuance to partners (engineers, customers, field) in both written and verbal form You're excited to solve ambiguous problems with a collaborative team You stay curious and keep learning, whether it's a new technology, a customer's domain, or a corner of the product you haven't touched About Databricks Databricks is the Data and AI company. More than 20,000 organizations worldwide \u2014 including adidas, AT&amp;T, Bayer, Block, Mastercard, Rivian, Unilever, and 70% of the Fortune 500 \u2014 rely on the Databricks Data + AI Platform to build and scale data and AI apps, analytics and agents. Headquartered in San Francisco with 30+ offices around the globe, Databricks offers a unified platform that includes Genie, Lakebase, Agent Bricks, Lakeflow, Lakehouse, and Unity Catalog. To learn more, follow Databr",
+   "company": "Databricks",
+   "family": "pm",
+   "age_days": 33,
+   "grad_year": "2027",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [
+    "Posted 33 days ago"
+   ],
+   "source": "greenhouse:databricks",
+   "score": 4.0,
+   "matches": [
+    "CS degree graduating 2027",
+    "Product management internship with AI research"
+   ],
+   "gaps": [
+    "No explicit experience building large\u2011scale data platforms",
+    "Limited design/UX collaboration experience",
+    "No demonstrated work with Databricks ecosystem"
+   ],
+   "actions": [
+    "Create a personal project that builds a scalable data pipeline using Databricks or similar cloud data platform",
+    "Take an online course or contribute to a project focusing on UI/UX design and cross\u2011functional collaboration with designers",
+    "Complete a Databricks certification or build a demo using Databricks notebooks to showcase familiarity with their tools"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-stripe-8202299",
+   "title": "Software Engineer, New Grad",
+   "url": "https://stripe.com/jobs/search?gh_jid=8202299",
+   "location": "Taiwan",
+   "posted": "2026-10-22T23:22:57-04:00",
+   "desc": "Who we are About Stripe Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build programmable financial infrastructure, rethinking from first principles how financial services should work, to make it easier and cheaper for any business to start and scale. More than 10 million businesses build on Stripe, spanning the economic frontier\u2014from solo founders to established enterprises\u2014united by a practical focus on growth. The most ambitious companies in the world use Stripe as core infrastructure to grow faster. They process trillions of dollars a year on Stripe, equivalent to around 1.6% of global GDP. While economic growth makes everyone better off, open markets also enable greater variety. When any business can easily serve a global customer base, the quality and diversity of products in the world increase, and craft and creativity are unleashed into the smallest niches. Our own growth is wholly contingent on the success of the businesses building on Stripe. We therefore invest back into our technology at an unusual rate. We make upgrades to our products every single day to deliver compounding gains to our customers. We maintain some of the most reliable APIs on the internet. We build entirely new pieces of financial infrastructure to enable new ideas. And our significant advances in risk and fraud infrastructure over many years are making the internet economy safer and more accessible.&nbsp; Though people at Stripe don\u2019t tend to take themselves seriously, Stripe is a fairly serious place: our customers are depending on us for their livelihoods. We admire ambition, intensity, curiosity, humility, and rigor. The most effective people become knowledgeable about many domains besides their own. Any company is an applied exercise in understanding some aspect of society or the market. In working with so many (especially the new and innovative ones), we think that Stripe is one of the very best places to learn about how the world works. Your role Stripe is large enough that individual products and projects can be rapidly deployed to a meaningful fraction of the world\u2019s businesses, but small enough that individual agency still has outsized impact. Small teams can impact how millions of businesses grow. Right now the global economy is replatforming around AI, creating new opportunities for growth. We\u2019re at the center of this, and we think the best work is still in front of us. To meet this moment, we\u2019re looking for people who move with urgency, like hard problems, and want their work to matter at a time of great change. If that\u2019s you, there\u2019s no better place to build your career. Who you are Ambitious builder: You\u2019re energized by building solutions without clear precedent and solving problems with far-reaching consequences. Successful Stripes are deeply curious, and prefer the joy of discovery to the comfort of certainty. Rigorous thinker: You appreciate that things worth doing are rarely simple. You en",
+   "company": "Stripe",
+   "family": "swe",
+   "age_days": 13,
+   "grad_year": "2027",
    "sponsorship": {
     "status": "likely",
     "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
    },
    "flags": [],
-   "source": "greenhouse:coinbase",
-   "score": 3.5,
+   "source": "greenhouse:stripe",
+   "score": 2.5,
    "matches": [
-    "Mentions python",
-    "Mentions sql"
+    "Python/Java programming",
+    "Product management internship"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
+   "gaps": [
+    "Limited production software engineering experience",
+    "No experience with payment/Stripe APIs",
+    "Few full\u2011stack project examples"
+   ],
+   "actions": [
+    "Build a personal project that implements a payment flow using Stripe\u2019s API and deploy it publicly",
+    "Complete a tutorial or contribute to an open\u2011source library that uses Stripe\u2019s SDKs to gain hands\u2011on API experience",
+    "Create a full\u2011stack web application (e.g., React front\u2011end with Node.js/SQL back\u2011end) and showcase it on GitHub with detailed documentation"
+   ],
+   "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   },
   {
-   "id": "gh-anthropic-5462893008",
-   "title": "Enforcement Analyst, Agentic Alignment",
-   "url": "https://job-boards.greenhouse.io/anthropic/jobs/5462893008",
-   "location": "Boston, MA; San Francisco, CA | Seattle, WA | New York City, NY | Washington, DC",
-   "posted": "2026-10-24T22:29:23-04:00",
-   "desc": "About Anthropic Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems. About the role Anthropic is an AI safety and research company working to build reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our customers and society as a whole. As an Enforcement Analyst focused on Agentic Alignment, you will play a crucial role in identifying and investigating harmful and unexpected behavior by models, and make enforcement decisions accordingly. You'll work closely with a suite of cross-functional teams, within and outside of Safeguards, including: Policy, Threat Intel, Engineering, Research, and Transparency. Your work will be essential in maintaining Anthropic's commitment to safe and beneficial AI as Claude takes on more autonomous work. Important context for this role: In this position you may be exposed to and engage with explicit content spanning a range of topics, including those of a sexual, violent, or psychologically disturbing nature. There is also an on-call responsibility across the Policy and Enforcement teams. Key responsibilities Review and investigate potential instances of Agentic Misalignment, working from transcripts, tool-use traces, and code&nbsp; Triage cases by severity and urgency and share through the appropriate channels Help operationalize review pipelines for agentic cases, translating leads from detection outputs and investigations into structured review workflows that scale Make enforcement decisions under the Usage Policy, applying it consistently to novel agentic scenarios and across surfaces, and documenting the reasoning behind each decision Assess cyber-related agentic activity, such as scanning, exploitation attempts, credential misuse or malicious code to determine its real-world harm potential Write clear, well-evidenced case write-ups for audiences ranging from enforcement peers to senior leadership Identify patterns and trends across cases, and close the loop between enforcement outcomes and upstream improvements by feeding findings back to policy, detection and research teams to improve policies, classifiers and model behavior Maintain rigorous documentation of enforcement decisions, review logic and precedents to build institutional knowledge Collaborate with Threat Intelligence, Research, Engineering and Policy partners so that detection coverage keeps pace with how agentic misuse and misaligned behavior evolve Use AI systems, including Claude, to accelerate your own investigations: summarizing long transcripts, analyzing code, querying data and building lightweight tooling Contribute to regular reports on agentic harm trends and enforcement outcomes Minimum qualifications Can read and understand code (for ",
+   "id": "gh-anthropic-5416829008",
+   "title": "Business Systems Analyst, New Product Introduction",
+   "url": "https://job-boards.greenhouse.io/anthropic/jobs/5416829008",
+   "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+   "posted": "2026-09-08T19:38:34-04:00",
+   "desc": "About Anthropic Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems. About the role We launch new products, models and pricing often, and each launch has to work in our systems on day one. A seller needs to be able to quote it, Deal Desk needs to be able to approve it, billing needs to charge for it correctly, and Finance needs to report on it. This role owns how a launch gets into our quote-to-cash systems, from the first pricing conversation to the first invoice. We are looking for someone who treats every launch as a change across many systems. You will join launch planning early, work out what has to change across catalog, quoting, contracts, billing, tax and reporting, and get all of it ready before the launch date. You will build a good part of the Salesforce work yourself and partner with our Salesforce developers and Billing Engineering on the rest. You will be the named owner of the NPI process for systems, and the person Product, Pricing and Finance call when they want to know what it takes to launch something. We are an AI-first systems team. You will use Claude as a normal part of how you design, build, test and document, and you will look for ways to make launches faster and more repeatable with AI. Key responsibilities Own the systems side of new product and pricing launches, from the first pricing discussion through launch day and the first billing cycle Turn a pricing and packaging decision into concrete system changes: SKUs, price books, bundles, discount and approval rules, contract terms, billing plans, tax codes and reporting Build and run a repeatable NPI playbook: intake, a readiness checklist, sign-offs, a launch calendar and a post-launch review Join launch planning early with Product and Pricing. Push back on pricing ideas that cannot be quoted, billed or reported cleanly, and offer options that can Design how new pricing models work end to end, including usage-based, seat-based, tiered, committed and multi-year ramp pricing, and which system is the source of truth for each part Plan the impact on existing customers: moving customers to new SKUs, grandfathering, amendments and co-termination, and how renewals will work Own end-of-sale and retirement of products and prices, so old SKUs leave the catalog without breaking renewals, billing or reporting Coordinate the changes across Salesforce, billing and our tax platform, working with the teams who own each system Partner with Deal Desk, Sales, Finance, Accounting, Tax and Legal so each team signs off on what changes for them before launch Make sure sellers and Deal Desk are ready on launch day, including quote templates, approval paths, guidance and enablement Check every launch after it goes live: do quotes,",
    "company": "Anthropic",
    "family": "ops",
-   "age_days": 10,
+   "age_days": 57,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "yes",
     "reason": "Posting mentions: \"We do sponsor\""
    },
-   "flags": [],
+   "flags": [
+    "Posted 57 days ago"
+   ],
    "source": "greenhouse:anthropic",
-   "score": 3.5,
+   "score": 2.5,
    "matches": [
-    "Mentions python",
-    "Mentions java"
+    "Product Management experience",
+    "AI research familiarity"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "gh-databricks-8886944002",
-   "title": "Solutions Engineer",
-   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8886944002",
-   "location": "Chicago, Illinois",
-   "posted": "2026-10-15T10:51:35-04:00",
-   "desc": "FEQ128R31 Solutions Engineer At Databricks, our core values drive everything we do; a culture of proactiveness and a customer-first mindset fuels our mission to create a unified platform that makes AI and data analytics accessible to everyone in their own context. This role is part of our programmatic effort to develop promising field engineers\u2014offering a launchpad for the next generation of data leaders . We aim to build leaders who will drive both data and business strategy for our customers, leading the front lines of Databricks growth as well. With our Data Intelligence Platform, we make it easy to turn insights into action while encouraging creativity, experimentation, and continuous improvement. You\u2019ll play a key role in this mission, building upon your emerging technical skills in the area of solutions engineering, learn how to apply them in the Databricks platform and show customers how to tackle real-world data challenges. &nbsp;Solutions engineers go further than telling them what's possible; they build working prototypes and advise customer teams on how to get to production. &nbsp;You\u2019ll join a collaborative, customer-obsessed team that thrives on innovation to help customers reach their goals. Come help us change how the world works with data\u2014and shape your future while you're at it! This will be an in-office role and candidates must be based in Chicago, IL. Relocation assistance will not be provided. Recent graduate?: We\u2019d love for you to explore our current internship openings on our careers page and submit your application for our roles designed for new college graduates. More About Databricks YouTube The impact you will have: Form successful relationships with customers throughout your assigned territory, providing technical and business value to Databricks customers in collaboration with Account Executives. Operate as an expert in AI and data analytics to excite customers about Databricks. You will develop into a \u2018champion\u2019 and trusted advisor on multiple areas of architecture, design, and implementation to lead to the successful adoption of the Databricks data and AI platform. Adopt a builder-first approach: move quickly from customer problem to working prototype by writing code, building demos, and creating reusable assets that accelerate customer outcomes.&nbsp; Use AI tools to increase your productivity and drive innovation. Scale best practices in your field and support customers by authoring reference architectures, how-tos, demo applications, and help build the Databricks community in your region by leading workshops, seminars, and meet-ups. Grow your knowledge and expertise to the level of a technical and/or industry specialist. What we look for: The ideal candidate has 2+ years of technical experience in a customer-facing solutions engineering role. Bachelor's degree in Computer Science, Data Science, Information Systems, Engineering, or equivalent experience through work experience Demonstrates a builder mindset: prefer",
-   "company": "Databricks",
-   "family": "swe",
-   "age_days": 20,
-   "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "likely",
-    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
-   },
-   "flags": [],
-   "source": "greenhouse:databricks",
-   "score": 3.5,
-   "matches": [
-    "Mentions python",
-    "Mentions java"
+   "gaps": [
+    "Salesforce experience",
+    "Revenue systems/GTM experience",
+    "Pricing model design knowledge"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
+   "actions": [
+    "Enroll in a Salesforce admin certification or hands\u2011on tutorial to gain practical experience",
+    "Seek a short\u2011term project or internship focused on quote\u2011to\u2011cash, billing, or revenue operations to build GTM systems exposure",
+    "Study common SaaS pricing models (usage\u2011based, tiered, multi\u2011year) and practice mapping them to system configurations such as price books and SKUs"
+   ],
+   "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   },
   {
    "id": "ab-ramp-b6132946-62e7-4ed4-9b93-f7cbe0e2c1fe",
@@ -155,16 +190,279 @@
    },
    "flags": [],
    "source": "ashby:ramp",
-   "score": 2.5,
+   "score": 2.0,
    "matches": [
-    "Mentions python",
-    "Mentions sql"
+    "product management experience",
+    "data analysis skills"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
+   "gaps": [
+    "no direct fraud detection experience",
+    "no stated willingness for night/weekend shifts",
+    "limited exposure to financial services"
+   ],
+   "actions": [
+    "obtain fraud analytics certification or relevant coursework",
+    "add availability for 24/7 schedule in application or cover letter",
+    "gain exposure to finance via internship or project focusing on payments or banking"
+   ],
+   "score_method": "groq",
    "first_seen": "2026-11-04T22:04:05.227010+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-anthropic-5462893008",
+   "title": "Enforcement Analyst, Agentic Alignment",
+   "url": "https://job-boards.greenhouse.io/anthropic/jobs/5462893008",
+   "location": "Boston, MA; San Francisco, CA | Seattle, WA | New York City, NY | Washington, DC",
+   "posted": "2026-10-24T22:29:23-04:00",
+   "desc": "About Anthropic Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems. About the role Anthropic is an AI safety and research company working to build reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our customers and society as a whole. As an Enforcement Analyst focused on Agentic Alignment, you will play a crucial role in identifying and investigating harmful and unexpected behavior by models, and make enforcement decisions accordingly. You'll work closely with a suite of cross-functional teams, within and outside of Safeguards, including: Policy, Threat Intel, Engineering, Research, and Transparency. Your work will be essential in maintaining Anthropic's commitment to safe and beneficial AI as Claude takes on more autonomous work. Important context for this role: In this position you may be exposed to and engage with explicit content spanning a range of topics, including those of a sexual, violent, or psychologically disturbing nature. There is also an on-call responsibility across the Policy and Enforcement teams. Key responsibilities Review and investigate potential instances of Agentic Misalignment, working from transcripts, tool-use traces, and code&nbsp; Triage cases by severity and urgency and share through the appropriate channels Help operationalize review pipelines for agentic cases, translating leads from detection outputs and investigations into structured review workflows that scale Make enforcement decisions under the Usage Policy, applying it consistently to novel agentic scenarios and across surfaces, and documenting the reasoning behind each decision Assess cyber-related agentic activity, such as scanning, exploitation attempts, credential misuse or malicious code to determine its real-world harm potential Write clear, well-evidenced case write-ups for audiences ranging from enforcement peers to senior leadership Identify patterns and trends across cases, and close the loop between enforcement outcomes and upstream improvements by feeding findings back to policy, detection and research teams to improve policies, classifiers and model behavior Maintain rigorous documentation of enforcement decisions, review logic and precedents to build institutional knowledge Collaborate with Threat Intelligence, Research, Engineering and Policy partners so that detection coverage keeps pace with how agentic misuse and misaligned behavior evolve Use AI systems, including Claude, to accelerate your own investigations: summarizing long transcripts, analyzing code, querying data and building lightweight tooling Contribute to regular reports on agentic harm trends and enforcement outcomes Minimum qualifications Can read and understand code (for ",
+   "company": "Anthropic",
+   "family": "ops",
+   "age_days": 11,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "yes",
+    "reason": "Posting mentions: \"We do sponsor\""
+   },
+   "flags": [],
+   "source": "greenhouse:anthropic",
+   "score": 2.0,
+   "matches": [
+    "Python coding ability",
+    "AI research experience"
+   ],
+   "gaps": [
+    "Security/cyber threat background",
+    "Trust & safety enforcement experience",
+    "Structured investigation workflow experience"
+   ],
+   "actions": [
+    "Enroll in a security fundamentals or cyber threat intelligence course/certification",
+    "Seek a trust\u2011and\u2011safety or enforcement internship/project to build relevant experience",
+    "Practice conducting structured investigations on sample AI misuse cases and document findings"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-databricks-8886944002",
+   "title": "Solutions Engineer",
+   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8886944002",
+   "location": "Chicago, Illinois",
+   "posted": "2026-10-15T10:51:35-04:00",
+   "desc": "FEQ128R31 Solutions Engineer At Databricks, our core values drive everything we do; a culture of proactiveness and a customer-first mindset fuels our mission to create a unified platform that makes AI and data analytics accessible to everyone in their own context. This role is part of our programmatic effort to develop promising field engineers\u2014offering a launchpad for the next generation of data leaders . We aim to build leaders who will drive both data and business strategy for our customers, leading the front lines of Databricks growth as well. With our Data Intelligence Platform, we make it easy to turn insights into action while encouraging creativity, experimentation, and continuous improvement. You\u2019ll play a key role in this mission, building upon your emerging technical skills in the area of solutions engineering, learn how to apply them in the Databricks platform and show customers how to tackle real-world data challenges. &nbsp;Solutions engineers go further than telling them what's possible; they build working prototypes and advise customer teams on how to get to production. &nbsp;You\u2019ll join a collaborative, customer-obsessed team that thrives on innovation to help customers reach their goals. Come help us change how the world works with data\u2014and shape your future while you're at it! This will be an in-office role and candidates must be based in Chicago, IL. Relocation assistance will not be provided. Recent graduate?: We\u2019d love for you to explore our current internship openings on our careers page and submit your application for our roles designed for new college graduates. More About Databricks YouTube The impact you will have: Form successful relationships with customers throughout your assigned territory, providing technical and business value to Databricks customers in collaboration with Account Executives. Operate as an expert in AI and data analytics to excite customers about Databricks. You will develop into a \u2018champion\u2019 and trusted advisor on multiple areas of architecture, design, and implementation to lead to the successful adoption of the Databricks data and AI platform. Adopt a builder-first approach: move quickly from customer problem to working prototype by writing code, building demos, and creating reusable assets that accelerate customer outcomes.&nbsp; Use AI tools to increase your productivity and drive innovation. Scale best practices in your field and support customers by authoring reference architectures, how-tos, demo applications, and help build the Databricks community in your region by leading workshops, seminars, and meet-ups. Grow your knowledge and expertise to the level of a technical and/or industry specialist. What we look for: The ideal candidate has 2+ years of technical experience in a customer-facing solutions engineering role. Bachelor's degree in Computer Science, Data Science, Information Systems, Engineering, or equivalent experience through work experience Demonstrates a builder mindset: prefer",
+   "company": "Databricks",
+   "family": "swe",
+   "age_days": 20,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [],
+   "source": "greenhouse:databricks",
+   "score": 2.0,
+   "matches": [
+    "Python/Java skills",
+    "Customer-facing internship"
+   ],
+   "gaps": [
+    "Big Data experience",
+    "2+ years solutions engineering experience",
+    "Chicago location"
+   ],
+   "actions": [
+    "Complete an online Spark/Databricks fundamentals course",
+    "Pursue a solutions engineering project or internship to gain relevant experience",
+    "Research relocation options or remote opportunities with Databricks in Chicago"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-coinbase-8233945",
+   "title": "Enterprise Risk Management Analyst",
+   "url": "https://www.coinbase.com/careers/positions/8233945?gh_jid=8233945",
+   "location": "Remote - Luxembourg",
+   "posted": "2026-10-02T21:29:36-04:00",
+   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . Coinbase's Enterprise Risk Management team helps the company identify, understand, and manage risks that could affect our strategy, operations, and customers. As an Enterprise Risk Management Analyst, you'll sit at the intersection of risk, data, and strategy, supporting core ERM activities while using data and technology to make them more insightful and scalable. You'll analyze risk information, identify emerging risk patterns and signals, improve GRC data quality, support risk tooling and automation, and translate analysis into clear insights that help leaders make better risk-informed decisions. What you'll do: Analyze large, complex, and sometimes unstructured datasets to identify trends, anomalies, correlations, concentrations, and emerging enterprise risk signals. Build repeatable analytical methodologies, dashboards, metrics, and visualizations that improve how Coinbase understands and monitors enterprise risk. Connect information across risk assessments, incidents, KRIs, audit findings, regulatory developments, business performance, and external signals to develop an integrated view of risk. Investigate changes in risk indicators, challenge assumptions, identify underlying drivers, and distinguish meaningful signals from noise. Automate recurring analysis, data preparation, and reporting using SQL, Python, AI, and other available technologies. Partner across Finance, Legal, Compliance, Security, Operations, Strategy, and regional teams to understand evolving risks and translate complex analytical findings into concise, executive-ready narratives and recommendations. Required Skills and Experience: 1-4 years of experience in risk analytics, data analytics, business intelligence, financial analysis, or a related analytics discipline, with demonstrated ability to extract, clean, join, and analyze complex datasets. Proficiency in SQL and working experience with Python or comparable analytical tools for data manipulation and analysis. Demonstrated ability to move from an ambiguous business question to a structured analytical approach and actionable conclusion, including independently investigating unexpected results. Ability to translate analytical findings into clear risk insights for leadership and cross-functional stakeholders, connecting how findings relate to enterprise-wide risk, opportunities, or decisions. Utilizes generative AI respons",
+   "company": "Coinbase",
+   "family": "ops",
+   "age_days": 33,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [
+    "Posted 33 days ago"
+   ],
+   "source": "greenhouse:coinbase",
+   "score": 2.0,
+   "matches": [
+    "Python",
+    "SQL"
+   ],
+   "gaps": [
+    "lack of risk analytics experience",
+    "no finance/regulatory background",
+    "insufficient professional experience (1-4 years)"
+   ],
+   "actions": [
+    "pursue a risk analytics internship or co\u2011op to gain hands\u2011on experience",
+    "complete coursework or certification in financial risk management or regulatory compliance",
+    "build a portfolio of data\u2011driven risk analysis projects using SQL and Python to demonstrate relevant skills"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-databricks-8802705002",
+   "title": "Program Manager, Public Sector (Commercial Legal)",
+   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8802705002",
+   "location": "Washington, D.C.",
+   "posted": "2026-09-22T21:22:18-04:00",
+   "desc": "GAQ427R57 About Databricks Databricks is the Data and AI company. More than 20,000 organizations worldwide \u2014 including over 70% of the Fortune 500 and most of the largest U.S. government agencies \u2014 rely on Databricks to build and scale data and AI apps, analytics, and agents. About the Role As a Program Manager for Public Sector in Commercial Legal at Databricks, you will own the contracting engine for one of the fastest-growing segments of the business: US and international public-sector deals. Reporting to the Director &amp; Associate General Counsel, Commercial, you will act as the operational backbone for the public-sector contracting function, working in close coordination with Public Sector legal, sales, operations, product, engineering, finance, and other cross-functional stakeholders. This is a mission-critical and highly independent role designed for a proactive, focused person who thrives on building programs in-flight to drive accountability and positive, timely outcomes. You won't just track workstreams \u2014 you will own them. You will design and manage contracting programs and workflows, build playbooks and governance frameworks, route and manage complex government deals through stakeholders, handle routine contracting matters under attorney supervision, and support some contract management/contract lifecycle work (including Databricks' GSA MAS). If you are an operationally fierce program manager with government-contracting chops and extraordinary interpersonal skills who wants to be the linchpin to Databricks' pubsec legal function, we want to talk to you. Location: Washington, DC metro area (hybrid). The Impact You Will Have Own the Public Sector Contracting Program: Act as the central driver for US public-sector contracting operations (US Federal/Defense, Defense Industrial Base, and SLED), plus Canada and priority overseas markets. Drive Cross-Functional Deal Execution: Coordinate stakeholders, including sales, deal desk, operations, security, compliance, and finance through a predictable, well-governed pipeline. Keep stakeholders and executives well informed about the work and accountable to deadlines. No surprises, no missed deadlines, and exceptions are handled with aplomb. Manage Pubsec Contracts and Contract Lifecycle: Manage Databricks' pubsec schedules, including our GSA MAS and similar vehicles. Track contracts from RFI to signature to closeout, and support amendments. Build Enablement : Create enablement for Legal and GTM teams so that routine matters can be handled at scale with minimal legal involvement. Build and maintain playbooks, talk tracks, clause libraries, and training that support self-service for sales teams and decrease deal friction. Strengthen Post-Award Obligation Management: Own (in collaboration with Compliance) traceability for non-standard contractual commitments, such as by building obligation matrices, aligning them to accountable owners, systems, and controls across the organization. Scale Internation",
+   "company": "Databricks",
+   "family": "pm",
+   "age_days": 43,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "no",
+    "reason": "Posting says: \"security clearance\""
+   },
+   "flags": [
+    "Posted 43 days ago"
+   ],
+   "source": "greenhouse:databricks",
+   "score": 2.0,
+   "matches": [
+    "program management experience",
+    "cross\u2011functional coordination"
+   ],
+   "gaps": [
+    "government contracting experience",
+    "legal/contract lifecycle knowledge",
+    "public\u2011sector deal exposure"
+   ],
+   "actions": [
+    "seek internship or coursework focused on government contracting to build relevant experience",
+    "study contract management fundamentals and Databricks-specific GSA MAS processes",
+    "network with public\u2011sector program managers and attend related webinars to understand deal workflows"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-coinbase-8351568",
+   "title": "Prime Financing Trading Analyst",
+   "url": "https://www.coinbase.com/careers/positions/8351568?gh_jid=8351568",
+   "location": "Remote - USA",
+   "posted": "2026-11-04T14:00:20-05:00",
+   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . As a Prime Financing Trading Analyst on the Institutional Prime Finance team, you'll help manage and grow Coinbase's institutional financing book across lending, margin, and shorting products. This team is building a full-service prime brokerage platform that enables institutions to deploy trading strategies and achieve capital efficiency at scale. You'll trade day-to-day across the financing desk, optimize net interest margin, and work directly with hedge funds, ETF issuers, market makers, and corporates to deliver bespoke financing solutions. What you'll do: Trade the financing book daily, managing long and short side liquidity across Prime Financing and CB Institutional products. Optimize net interest margin on principal borrow/lend activity through active position management and pricing adjustments. Support asset and client pricing for financing implementation across lending, margin, and shorting products. Engage directly with institutional clients, including hedge funds, ETF issuers, market makers, UHNW individuals, and corporates, to structure financing solutions. Build and refine custom client solutions that improve onboarding, internal processes, and overall client experience. Required Skills and Experience: 2+ years of experience in equity or fixed income financing, prime brokerage, or derivatives at a bank, broker-dealer, or crypto exchange. Proficiency in Python, SQL, or similar programming languages applied to trading analytics, pricing models, or data analysis. Demonstrated knowledge of fiat and crypto funding market fundamentals, including repo, securities lending, and margin financing mechanics. Proven ability to communicate clearly with institutional clients and internal stakeholders while managing competing priorities with urgency. Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality. Pay Transparency Notice: Base salary varies by location (see range below). Total compensation may also include equity and bonus eligibility, and benefits (medical, dental, vision, 401(k)).&nbsp; &nbsp; Annual base salary range (excluding equity and bonus): $126,990 &mdash; $149,400 USD Application Limit: Candidates may submit a maximum of 3 applications within a 6-month period. Equal Opportunity Employer: Coinbase is an Equal Oppor",
+   "company": "Coinbase",
+   "family": "ops",
+   "age_days": 0,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [],
+   "source": "greenhouse:coinbase",
+   "score": 1.5,
+   "matches": [
+    "Python",
+    "SQL"
+   ],
+   "gaps": [
+    "2+ years equity/fixed income financing experience",
+    "Institutional client communication",
+    "Knowledge of financing market fundamentals"
+   ],
+   "actions": [
+    "Pursue a finance-focused internship or project to gain relevant experience",
+    "Take a client-facing communication workshop or role-play exercises with institutional scenarios",
+    "Study repo, securities lending, margin financing, and crypto funding markets through courses or certifications"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-coinbase-8281622",
+   "title": "Analyst, Privacy (Privacy Assessments)",
+   "url": "https://www.coinbase.com/careers/positions/8281622?gh_jid=8281622",
+   "location": "Remote - USA",
+   "posted": "2026-10-22T20:03:47-04:00",
+   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . As a Privacy Analyst on the Privacy Operations team within Security, you'll play a central role in how Coinbase identifies and manages privacy risk across its products and platforms. This team partners with Legal, Product, and Engineering to perform privacy assessments, manage privacy issues through the product lifecycle, and continuously improve the frameworks and tooling that keep customer data safe. You'll own the execution of complex privacy assessments for new products and features, drive issue remediation, and build scalable processes that embed privacy by design into how Coinbase ships. What you'll do: Own end-to-end privacy assessments for new products and features, synthesizing findings and driving remediation with cross-functional partners across Legal, Product, and Engineering. Perform regulatory requirement mapping against the privacy common controls framework and identify where control updates are needed to address evolving obligations. Track privacy requirements and issues throughout the product lifecycle, managing escalations and driving timely resolution with business owners. Partner with Product and Engineering teams by embedding into roadmap planning processes and advising on privacy-by-design principles for onchain and web3 products. Identify and implement automation and AI-driven process improvements to streamline privacy assessments and issue management workflows. Required Skills and Experience: 3+ years in technology risk management with a focus on privacy or security, including hands-on experience conducting privacy assessments (DPIAs/PIAs, data flow reviews, or equivalent). Demonstrated ability to map regulatory requirements (GDPR, CCPA, PIPEDA, ePrivacy) to operational controls and validate remediation efforts. Proven ability to translate privacy legal guidance and product specs into functional requirements and actionable remediation plans. Experience managing a high volume of concurrent assessments while balancing strategic priorities and stakeholder escalations across technical and non-technical audiences. Familiarity with applying privacy principles to blockchain, onchain, and web3 products or willingness to develop this expertise rapidly. Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality. #LI-Remo",
+   "company": "Coinbase",
+   "family": "ops",
+   "age_days": 13,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [],
+   "source": "greenhouse:coinbase",
+   "score": 1.5,
+   "matches": [
+    "Python programming basics\",\"Interest in product/operations roles"
+   ],
+   "gaps": [
+    "No privacy risk management experience",
+    "No regulatory mapping (GDPR/CCPA) experience",
+    "No blockchain/web3 exposure"
+   ],
+   "actions": [
+    "Seek internship or project doing privacy assessments or DPIAs",
+    "Complete a GDPR/CCPA certification or coursework",
+    "Participate in blockchain or web3 developer bootcamp to gain domain knowledge"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+  },
+  {
+   "id": "gh-robinhood-8226972",
+   "title": "Fraud Investigations Analyst",
+   "url": "https://boards.greenhouse.io/robinhood/jobs/8226972?t=gh_src=&gh_jid=8226972",
+   "location": "Denver, CO; Westlake, TX",
+   "posted": "2026-10-21T15:39:48-04:00",
+   "desc": "Join us in building the future of finance. Our mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you\u2019re ready to be at the epicenter of this historic cultural and financial shift, keep reading. About the team + role We are building an elite team, applying frontier technologies to the world's biggest financial problems. We're looking for bold thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn't a place for complacency, it's where ambitious people do the best work of their careers. We're a high-performing, fast-moving team with ethics at the center of everything we do. Expectations are high, and so are the rewards. The Fraud Investigations team helps protect customers and the platform by reviewing suspicious activity, confirming what happened, and taking action to reduce risk. As a Fraud Investigation Analyst, you\u2019ll review fraud alerts, analyze transactional and behavioral signals, and document outcomes in line with internal policy and regulatory requirements. You\u2019ll also route higher-risk cases to the right partners and help limit customer impact through timely, accurate investigations\u2014your work directly supports trust and safety across Robinhood! This role is based in our Denver, CO and Westlake, TX office(s), with in-person attendance expected at least 3 days per week. At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community. Our office experience is intentional, energizing, and designed to fully support high-performing teams. Shifts Available: 10:30am-7pm (local time)&nbsp; Days off: Wednesday/Thursday 6am-2:30pm (local time) Days off: Tuesday/Wednesday&nbsp; What you'll do Review and investigate fraud alerts to assess potential fraudulent activity using common fraud patterns and investigation steps Analyze transactional and behavioral data to make risk-based decisions and complete clear, well-supported case documentation Manage daily alert and case volume to meet quality and service-level targets Partner with product, engineering, legal, compliance, vendor partners, and financial crime teams to gather information and escalate cases when needed Identify recurring fraud trends and suggest specific process improvements based on investigation outcomes What you bring 0\u20132 years of experience in fraud investigations or related financial crime, risk, compliance, or operations work, with exposure to account takeovers, identity theft, or money movement fraud Clear written documentation skills and the ability to explain decisions using evidence from account activity Strong attention to detail and comfort working with multiple data points (transactions, device signals, behavioral indicators) Ability to prioritize work, manage queue volume, and meet defined quality and productivity goals Strong collaboration",
+   "company": "Robinhood",
+   "family": "ops",
+   "age_days": 14,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [],
+   "source": "greenhouse:robinhood",
+   "score": 1.5,
+   "matches": [
+    "technical programming skills",
+    "analytical research experience"
+   ],
+   "gaps": [
+    "no fraud investigation experience",
+    "limited knowledge of financial crime regulations",
+    "insufficient case documentation practice"
+   ],
+   "actions": [
+    "secure a fraud\u2011operations or compliance internship to gain hands\u2011on investigation experience",
+    "earn a relevant certification such as CFE or CAMS to build regulatory knowledge",
+    "complete fraud\u2011case study exercises and build a portfolio of written investigation reports"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   },
   {
    "id": "gh-anthropic-5397704008",
@@ -183,46 +481,24 @@
    },
    "flags": [],
    "source": "greenhouse:anthropic",
-   "score": 2.5,
+   "score": 1.5,
    "matches": [
-    "Mentions python",
-    "Mentions ai research"
+    "Python experience",
+    "Research/analysis background"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
+   "gaps": [
+    "No security risk analysis experience",
+    "No FAIR quantitative modeling",
+    "Limited exposure to enterprise risk frameworks"
+   ],
+   "actions": [
+    "Seek internship or project in security risk analysis to build relevant experience",
+    "Complete a FAIR methodology course and practice Monte Carlo simulations in Python",
+    "Gain exposure to GRC or security risk frameworks through certifications or mentorship"
+   ],
+   "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "gh-coinbase-8233945",
-   "title": "Enterprise Risk Management Analyst",
-   "url": "https://www.coinbase.com/careers/positions/8233945?gh_jid=8233945",
-   "location": "Remote - Luxembourg",
-   "posted": "2026-10-02T21:29:36-04:00",
-   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . Coinbase's Enterprise Risk Management team helps the company identify, understand, and manage risks that could affect our strategy, operations, and customers. As an Enterprise Risk Management Analyst, you'll sit at the intersection of risk, data, and strategy, supporting core ERM activities while using data and technology to make them more insightful and scalable. You'll analyze risk information, identify emerging risk patterns and signals, improve GRC data quality, support risk tooling and automation, and translate analysis into clear insights that help leaders make better risk-informed decisions. What you'll do: Analyze large, complex, and sometimes unstructured datasets to identify trends, anomalies, correlations, concentrations, and emerging enterprise risk signals. Build repeatable analytical methodologies, dashboards, metrics, and visualizations that improve how Coinbase understands and monitors enterprise risk. Connect information across risk assessments, incidents, KRIs, audit findings, regulatory developments, business performance, and external signals to develop an integrated view of risk. Investigate changes in risk indicators, challenge assumptions, identify underlying drivers, and distinguish meaningful signals from noise. Automate recurring analysis, data preparation, and reporting using SQL, Python, AI, and other available technologies. Partner across Finance, Legal, Compliance, Security, Operations, Strategy, and regional teams to understand evolving risks and translate complex analytical findings into concise, executive-ready narratives and recommendations. Required Skills and Experience: 1-4 years of experience in risk analytics, data analytics, business intelligence, financial analysis, or a related analytics discipline, with demonstrated ability to extract, clean, join, and analyze complex datasets. Proficiency in SQL and working experience with Python or comparable analytical tools for data manipulation and analysis. Demonstrated ability to move from an ambiguous business question to a structured analytical approach and actionable conclusion, including independently investigating unexpected results. Ability to translate analytical findings into clear risk insights for leadership and cross-functional stakeholders, connecting how findings relate to enterprise-wide risk, opportunities, or decisions. Utilizes generative AI respons",
-   "company": "Coinbase",
-   "family": "ops",
-   "age_days": 32,
-   "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "likely",
-    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
-   },
-   "flags": [
-    "Posted 32 days ago"
-   ],
-   "source": "greenhouse:coinbase",
-   "score": 2.5,
-   "matches": [
-    "Mentions python",
-    "Mentions sql"
-   ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   },
   {
    "id": "gh-coinbase-8250032",
@@ -243,103 +519,60 @@
     "Posted 33 days ago"
    ],
    "source": "greenhouse:coinbase",
-   "score": 2.5,
+   "score": 1.5,
    "matches": [
-    "Mentions sql",
-    "Mentions data analysis"
+    "Python",
+    "SQL"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
+   "gaps": [
+    "FP&A experience",
+    "advanced Excel modeling",
+    "finance domain knowledge"
+   ],
+   "actions": [
+    "Secure an internship or project role in financial planning and analysis to build relevant experience",
+    "Complete an advanced Excel and financial modeling course (e.g., Wall Street Prep or Coursera) to develop driver\u2011based modeling skills",
+    "Engage in finance\u2011focused projects or certifications (e.g., CFA Level 1, fintech case studies) to gain industry knowledge"
+   ],
+   "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   },
   {
-   "id": "gh-databricks-8863326002",
-   "title": "Product Manager, New Grad (2027) - Belgrade",
-   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8863326002",
-   "location": "Belgrade, Serbia",
-   "posted": "2026-10-02T10:38:42-04:00",
-   "desc": "P-1453 At Databricks, we are passionate about helping data teams solve the world's toughest problems \u2014 from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business. As an Associate Product Manager, you will join a team that works diligently to understand and solve our customers\u2019 most challenging problems. We're hiring across all of our teams, including AI Platform, Genie, Machine Learning, Unity Catalog, Databricks SQL, ETL, Streaming, and EDA. As part of our 2027 APM cohort, you will have a dedicated manager and mentor as well as connect with product managers, engineers, designers, account teams, other interns, and leaders from across the company. We are hiring for Amsterdam, Belgrade and Berlin. The impact you will have: Deeply understand customer problem space and establish the rails for viable solution space Prototype and test early ideas with customers and engineers to validate direction before the team commits to a build Work with engineers and designers to ship features on the Databricks platformWork with a team to build features for the Databricks platform Own your project end-to-end \u2014 design, build, launch, and iterate on feedbackManage your project end-to-end, including design, code, launch and feedback Build with scale, quality, and security in mind from day oneLearn about building a platform that scales quickly while maintaining quality and security What we look for: You will graduate in Fall 2026 or Spring 2027 with a bachelors or masters degree in computer science or related engineering practice Pursuing a bachelor's or master's in computer science or a related engineering field You've used AI tooling for both personal productivity and development projects You have some first hand experience with SQL and/or Python You're hands-on and learn by doing \u2014 happy to build, test, and iterate your way to an answer You use analytical skills to make data-driven decisions (e.g. analyzing product usage) You can make complex topics simple and communicate nuance to partners (engineers, customers, field) in both written and verbal form You're excited to solve ambiguous problems with a collaborative team You stay curious and keep learning, whether it's a new technology, a customer's domain, or a corner of the product you haven't touched About Databricks Databricks is the Data and AI company. More than 20,000 organizations worldwide \u2014 including adidas, AT&amp;T, Bayer, Block, Mastercard, Rivian, Unilever, and 70% of the Fortune 500 \u2014 rely on the Databricks Data + AI Platform to build and scale data and AI apps, analytics and agents. Headquartered in San Francisco with 30+ offices around the globe, Databricks offers a unified platform that includes Genie, Lakebase, Agent Bricks, Lakeflow, Lakehouse, and Unity Catalog. To learn more, follow Databr",
-   "company": "Databricks",
-   "family": "pm",
-   "age_days": 33,
-   "grad_year": "2027",
-   "sponsorship": {
-    "status": "likely",
-    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
-   },
-   "flags": [
-    "Posted 33 days ago"
-   ],
-   "source": "greenhouse:databricks",
-   "score": 2.5,
-   "matches": [
-    "Mentions python",
-    "Mentions sql"
-   ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "gh-anthropic-5416829008",
-   "title": "Business Systems Analyst, New Product Introduction",
-   "url": "https://job-boards.greenhouse.io/anthropic/jobs/5416829008",
-   "location": "San Francisco, CA | New York City, NY | Seattle, WA",
-   "posted": "2026-09-08T19:38:34-04:00",
-   "desc": "About Anthropic Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems. About the role We launch new products, models and pricing often, and each launch has to work in our systems on day one. A seller needs to be able to quote it, Deal Desk needs to be able to approve it, billing needs to charge for it correctly, and Finance needs to report on it. This role owns how a launch gets into our quote-to-cash systems, from the first pricing conversation to the first invoice. We are looking for someone who treats every launch as a change across many systems. You will join launch planning early, work out what has to change across catalog, quoting, contracts, billing, tax and reporting, and get all of it ready before the launch date. You will build a good part of the Salesforce work yourself and partner with our Salesforce developers and Billing Engineering on the rest. You will be the named owner of the NPI process for systems, and the person Product, Pricing and Finance call when they want to know what it takes to launch something. We are an AI-first systems team. You will use Claude as a normal part of how you design, build, test and document, and you will look for ways to make launches faster and more repeatable with AI. Key responsibilities Own the systems side of new product and pricing launches, from the first pricing discussion through launch day and the first billing cycle Turn a pricing and packaging decision into concrete system changes: SKUs, price books, bundles, discount and approval rules, contract terms, billing plans, tax codes and reporting Build and run a repeatable NPI playbook: intake, a readiness checklist, sign-offs, a launch calendar and a post-launch review Join launch planning early with Product and Pricing. Push back on pricing ideas that cannot be quoted, billed or reported cleanly, and offer options that can Design how new pricing models work end to end, including usage-based, seat-based, tiered, committed and multi-year ramp pricing, and which system is the source of truth for each part Plan the impact on existing customers: moving customers to new SKUs, grandfathering, amendments and co-termination, and how renewals will work Own end-of-sale and retirement of products and prices, so old SKUs leave the catalog without breaking renewals, billing or reporting Coordinate the changes across Salesforce, billing and our tax platform, working with the teams who own each system Partner with Deal Desk, Sales, Finance, Accounting, Tax and Legal so each team signs off on what changes for them before launch Make sure sellers and Deal Desk are ready on launch day, including quote templates, approval paths, guidance and enablement Check every launch after it goes live: do quotes,",
-   "company": "Anthropic",
+   "id": "ab-ramp-7e531974-caac-46a2-804e-c6c3140bfda4",
+   "title": "Analyst, Deal Operations",
+   "url": "https://jobs.ashbyhq.com/ramp/7e531974-caac-46a2-804e-c6c3140bfda4",
+   "location": "San Francisco, CA",
+   "posted": "2026-10-15T13:17:35.182+00:00",
+   "desc": "ABOUT RAMP Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $275B in annualized spend flows in and out of 85,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books. The problems are high-stakes, data-dense, and unforgiving. We hire people with high agency and high urgency. We look for slope over intercept. We care less about where you trained and more about what you\u2019ve built. At Ramp, everyone is a builder who owns problems end to end and makes consequential decisions that shape the outcome. The median Ramp customer saves 7.5% and grows revenue 16% in their first year \u2013 far in excess of businesses operating without Ramp. We believe every ambitious company deserves the same. If you want to build systems that directly shape how companies move and manage billions, Ramp is the place to do it. ABOUT THE ROLE We are looking for an Analyst, Deal Operations to help drive Ramp\u2019s next phase of growth! Reporting to the Senior Manager, Deal Desk, you\u2019ll be a key partner in taking our Sales organization to the next level, responsible for quoting, pricing structure, and contracting for our Sales team. You'll be an integral part of the Deal Operations team with a focus on offering guidance to drive deal execution while complying with company policies and procedures and ensuring consistency to manage risk. You\u2019ll work directly with our Sales, Legal, Accounting, and cross-functional leadership to better streamline efficient workflows and enhance sales productivity. WHAT YOU'LL DO - Quote & contract approvals \u2014 review and approve quotes and contract workflows within policy; escalate exceptions with clear context - Feature & subscription activation \u2014 enable product tiers, configure accounts, and manage trial extensions, and coordinate billing - Policy & process guidance \u2014 be the first line of support for AEs with questions about deal structure, approval requirements, and process - Playbook development \u2014 document what you learn; help build the SOPs and escalation guides that make this function scalable - Drive consistency across deal processes by helping to optimize, streamline, and automate quote-to-cash processes - Serves as a subject matter expert on deal constructs, operational procedures, approval policies, and controls WHAT YOU NEED - 3-5 years in a Deal Desk environment, preferably in a high growth SaaS company. - Experience with Salesforce, CPQ, and other sales-related systems, including pricing and data enrichment tools. - Exceptional communication skills, written and verbal. - Excellent project management instincts, with an ability to manage multiple projects at one time. - You have a \u201cget things done\u201d mentality; you can dissect problems, identify solutions, and drive these solutions to completion with a high degree of autonomy. BENEFITS AVAILABLE TO ALL FULL-TIME RAMP EMPLOYEES (GLOBAL) - Flexible PTO - Centralized home-",
+   "company": "Ramp",
    "family": "ops",
-   "age_days": 56,
+   "age_days": 20,
    "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "yes",
-    "reason": "Posting mentions: \"We do sponsor\""
-   },
-   "flags": [
-    "Posted 56 days ago"
-   ],
-   "source": "greenhouse:anthropic",
-   "score": 2.5,
-   "matches": [
-    "Mentions sql",
-    "Mentions ai research"
-   ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "gh-stripe-8202299",
-   "title": "Software Engineer, New Grad",
-   "url": "https://stripe.com/jobs/search?gh_jid=8202299",
-   "location": "Taiwan",
-   "posted": "2026-10-22T23:22:57-04:00",
-   "desc": "Who we are About Stripe Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build programmable financial infrastructure, rethinking from first principles how financial services should work, to make it easier and cheaper for any business to start and scale. More than 10 million businesses build on Stripe, spanning the economic frontier\u2014from solo founders to established enterprises\u2014united by a practical focus on growth. The most ambitious companies in the world use Stripe as core infrastructure to grow faster. They process trillions of dollars a year on Stripe, equivalent to around 1.6% of global GDP. While economic growth makes everyone better off, open markets also enable greater variety. When any business can easily serve a global customer base, the quality and diversity of products in the world increase, and craft and creativity are unleashed into the smallest niches. Our own growth is wholly contingent on the success of the businesses building on Stripe. We therefore invest back into our technology at an unusual rate. We make upgrades to our products every single day to deliver compounding gains to our customers. We maintain some of the most reliable APIs on the internet. We build entirely new pieces of financial infrastructure to enable new ideas. And our significant advances in risk and fraud infrastructure over many years are making the internet economy safer and more accessible.&nbsp; Though people at Stripe don\u2019t tend to take themselves seriously, Stripe is a fairly serious place: our customers are depending on us for their livelihoods. We admire ambition, intensity, curiosity, humility, and rigor. The most effective people become knowledgeable about many domains besides their own. Any company is an applied exercise in understanding some aspect of society or the market. In working with so many (especially the new and innovative ones), we think that Stripe is one of the very best places to learn about how the world works. Your role Stripe is large enough that individual products and projects can be rapidly deployed to a meaningful fraction of the world\u2019s businesses, but small enough that individual agency still has outsized impact. Small teams can impact how millions of businesses grow. Right now the global economy is replatforming around AI, creating new opportunities for growth. We\u2019re at the center of this, and we think the best work is still in front of us. To meet this moment, we\u2019re looking for people who move with urgency, like hard problems, and want their work to matter at a time of great change. If that\u2019s you, there\u2019s no better place to build your career. Who you are Ambitious builder: You\u2019re energized by building solutions without clear precedent and solving problems with far-reaching consequences. Successful Stripes are deeply curious, and prefer the joy of discovery to the comfort of certainty. Rigorous thinker: You appreciate that things worth doing are rarely simple. You en",
-   "company": "Stripe",
-   "family": "swe",
-   "age_days": 12,
-   "grad_year": "2027",
    "sponsorship": {
     "status": "likely",
     "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
    },
    "flags": [],
-   "source": "greenhouse:stripe",
-   "score": 2.0,
+   "source": "ashby:ramp",
+   "score": 1.0,
    "matches": [
-    "Mentions apis"
+    "technical programming skills",
+    "product management exposure"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
+   "gaps": [
+    "no deal desk experience",
+    "no Salesforce/CPQ knowledge",
+    "limited project management track record"
+   ],
+   "actions": [
+    "secure an internship or entry\u2011level role in sales operations or deal desk to build relevant experience",
+    "complete a Salesforce Administrator (or CPQ) certification to gain required system knowledge",
+    "lead a campus or side\u2011project that automates a workflow or pricing process to demonstrate project management and automation skills"
+   ],
+   "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   },
   {
    "id": "gh-coinbase-8248775",
@@ -360,90 +593,24 @@
     "Posted 33 days ago"
    ],
    "source": "greenhouse:coinbase",
-   "score": 2.0,
+   "score": 1.0,
    "matches": [
-    "Mentions sql"
+    "SQL",
+    "Python"
    ],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
+   "gaps": [
+    "financial services operations experience",
+    "knowledge of U.S. equities trade lifecycle",
+    "experience with clearing platforms (e.g., Apex)"
+   ],
+   "actions": [
+    "secure an internship or entry\u2011level role in brokerage or financial operations to build relevant experience",
+    "complete a focused study or certification on U.S. equities trade lifecycle and settlement processes",
+    "learn and get hands\u2011on exposure to clearing platforms such as Apex, possibly via online courses or mentorship"
+   ],
+   "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "gh-coinbase-8281622",
-   "title": "Analyst, Privacy (Privacy Assessments)",
-   "url": "https://www.coinbase.com/careers/positions/8281622?gh_jid=8281622",
-   "location": "Remote - USA",
-   "posted": "2026-10-22T20:03:47-04:00",
-   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . As a Privacy Analyst on the Privacy Operations team within Security, you'll play a central role in how Coinbase identifies and manages privacy risk across its products and platforms. This team partners with Legal, Product, and Engineering to perform privacy assessments, manage privacy issues through the product lifecycle, and continuously improve the frameworks and tooling that keep customer data safe. You'll own the execution of complex privacy assessments for new products and features, drive issue remediation, and build scalable processes that embed privacy by design into how Coinbase ships. What you'll do: Own end-to-end privacy assessments for new products and features, synthesizing findings and driving remediation with cross-functional partners across Legal, Product, and Engineering. Perform regulatory requirement mapping against the privacy common controls framework and identify where control updates are needed to address evolving obligations. Track privacy requirements and issues throughout the product lifecycle, managing escalations and driving timely resolution with business owners. Partner with Product and Engineering teams by embedding into roadmap planning processes and advising on privacy-by-design principles for onchain and web3 products. Identify and implement automation and AI-driven process improvements to streamline privacy assessments and issue management workflows. Required Skills and Experience: 3+ years in technology risk management with a focus on privacy or security, including hands-on experience conducting privacy assessments (DPIAs/PIAs, data flow reviews, or equivalent). Demonstrated ability to map regulatory requirements (GDPR, CCPA, PIPEDA, ePrivacy) to operational controls and validate remediation efforts. Proven ability to translate privacy legal guidance and product specs into functional requirements and actionable remediation plans. Experience managing a high volume of concurrent assessments while balancing strategic priorities and stakeholder escalations across technical and non-technical audiences. Familiarity with applying privacy principles to blockchain, onchain, and web3 products or willingness to develop this expertise rapidly. Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality. #LI-Remo",
-   "company": "Coinbase",
-   "family": "ops",
-   "age_days": 12,
-   "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "likely",
-    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
-   },
-   "flags": [],
-   "source": "greenhouse:coinbase",
-   "score": 1.0,
-   "matches": [],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "gh-robinhood-8226972",
-   "title": "Fraud Investigations Analyst",
-   "url": "https://boards.greenhouse.io/robinhood/jobs/8226972?t=gh_src=&gh_jid=8226972",
-   "location": "Denver, CO; Westlake, TX",
-   "posted": "2026-10-21T15:39:48-04:00",
-   "desc": "Join us in building the future of finance. Our mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you\u2019re ready to be at the epicenter of this historic cultural and financial shift, keep reading. About the team + role We are building an elite team, applying frontier technologies to the world's biggest financial problems. We're looking for bold thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn't a place for complacency, it's where ambitious people do the best work of their careers. We're a high-performing, fast-moving team with ethics at the center of everything we do. Expectations are high, and so are the rewards. The Fraud Investigations team helps protect customers and the platform by reviewing suspicious activity, confirming what happened, and taking action to reduce risk. As a Fraud Investigation Analyst, you\u2019ll review fraud alerts, analyze transactional and behavioral signals, and document outcomes in line with internal policy and regulatory requirements. You\u2019ll also route higher-risk cases to the right partners and help limit customer impact through timely, accurate investigations\u2014your work directly supports trust and safety across Robinhood! This role is based in our Denver, CO and Westlake, TX office(s), with in-person attendance expected at least 3 days per week. At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community. Our office experience is intentional, energizing, and designed to fully support high-performing teams. Shifts Available: 10:30am-7pm (local time)&nbsp; Days off: Wednesday/Thursday 6am-2:30pm (local time) Days off: Tuesday/Wednesday&nbsp; What you'll do Review and investigate fraud alerts to assess potential fraudulent activity using common fraud patterns and investigation steps Analyze transactional and behavioral data to make risk-based decisions and complete clear, well-supported case documentation Manage daily alert and case volume to meet quality and service-level targets Partner with product, engineering, legal, compliance, vendor partners, and financial crime teams to gather information and escalate cases when needed Identify recurring fraud trends and suggest specific process improvements based on investigation outcomes What you bring 0\u20132 years of experience in fraud investigations or related financial crime, risk, compliance, or operations work, with exposure to account takeovers, identity theft, or money movement fraud Clear written documentation skills and the ability to explain decisions using evidence from account activity Strong attention to detail and comfort working with multiple data points (transactions, device signals, behavioral indicators) Ability to prioritize work, manage queue volume, and meet defined quality and productivity goals Strong collaboration",
-   "company": "Robinhood",
-   "family": "ops",
-   "age_days": 14,
-   "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "likely",
-    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
-   },
-   "flags": [],
-   "source": "greenhouse:robinhood",
-   "score": 1.0,
-   "matches": [],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "ab-ramp-7e531974-caac-46a2-804e-c6c3140bfda4",
-   "title": "Analyst, Deal Operations",
-   "url": "https://jobs.ashbyhq.com/ramp/7e531974-caac-46a2-804e-c6c3140bfda4",
-   "location": "San Francisco, CA",
-   "posted": "2026-10-15T13:17:35.182+00:00",
-   "desc": "ABOUT RAMP Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $275B in annualized spend flows in and out of 85,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books. The problems are high-stakes, data-dense, and unforgiving. We hire people with high agency and high urgency. We look for slope over intercept. We care less about where you trained and more about what you\u2019ve built. At Ramp, everyone is a builder who owns problems end to end and makes consequential decisions that shape the outcome. The median Ramp customer saves 7.5% and grows revenue 16% in their first year \u2013 far in excess of businesses operating without Ramp. We believe every ambitious company deserves the same. If you want to build systems that directly shape how companies move and manage billions, Ramp is the place to do it. ABOUT THE ROLE We are looking for an Analyst, Deal Operations to help drive Ramp\u2019s next phase of growth! Reporting to the Senior Manager, Deal Desk, you\u2019ll be a key partner in taking our Sales organization to the next level, responsible for quoting, pricing structure, and contracting for our Sales team. You'll be an integral part of the Deal Operations team with a focus on offering guidance to drive deal execution while complying with company policies and procedures and ensuring consistency to manage risk. You\u2019ll work directly with our Sales, Legal, Accounting, and cross-functional leadership to better streamline efficient workflows and enhance sales productivity. WHAT YOU'LL DO - Quote & contract approvals \u2014 review and approve quotes and contract workflows within policy; escalate exceptions with clear context - Feature & subscription activation \u2014 enable product tiers, configure accounts, and manage trial extensions, and coordinate billing - Policy & process guidance \u2014 be the first line of support for AEs with questions about deal structure, approval requirements, and process - Playbook development \u2014 document what you learn; help build the SOPs and escalation guides that make this function scalable - Drive consistency across deal processes by helping to optimize, streamline, and automate quote-to-cash processes - Serves as a subject matter expert on deal constructs, operational procedures, approval policies, and controls WHAT YOU NEED - 3-5 years in a Deal Desk environment, preferably in a high growth SaaS company. - Experience with Salesforce, CPQ, and other sales-related systems, including pricing and data enrichment tools. - Exceptional communication skills, written and verbal. - Excellent project management instincts, with an ability to manage multiple projects at one time. - You have a \u201cget things done\u201d mentality; you can dissect problems, identify solutions, and drive these solutions to completion with a high degree of autonomy. BENEFITS AVAILABLE TO ALL FULL-TIME RAMP EMPLOYEES (GLOBAL) - Flexible PTO - Centralized home-",
-   "company": "Ramp",
-   "family": "ops",
-   "age_days": 20,
-   "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "likely",
-    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
-   },
-   "flags": [],
-   "source": "ashby:ramp",
-   "score": 1.0,
-   "matches": [],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   },
   {
    "id": "ab-notion-92de7ece-b7d9-4b2a-b9cb-b978cc690a46",
@@ -465,39 +632,15 @@
    ],
    "source": "ashby:notion",
    "score": 1.0,
-   "matches": [],
-   "gaps": [],
-   "actions": [],
-   "score_method": "keywords",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
-  },
-  {
-   "id": "gh-databricks-8802705002",
-   "title": "Program Manager, Public Sector (Commercial Legal)",
-   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8802705002",
-   "location": "Washington, D.C.",
-   "posted": "2026-09-22T21:22:18-04:00",
-   "desc": "GAQ427R57 About Databricks Databricks is the Data and AI company. More than 20,000 organizations worldwide \u2014 including over 70% of the Fortune 500 and most of the largest U.S. government agencies \u2014 rely on Databricks to build and scale data and AI apps, analytics, and agents. About the Role As a Program Manager for Public Sector in Commercial Legal at Databricks, you will own the contracting engine for one of the fastest-growing segments of the business: US and international public-sector deals. Reporting to the Director &amp; Associate General Counsel, Commercial, you will act as the operational backbone for the public-sector contracting function, working in close coordination with Public Sector legal, sales, operations, product, engineering, finance, and other cross-functional stakeholders. This is a mission-critical and highly independent role designed for a proactive, focused person who thrives on building programs in-flight to drive accountability and positive, timely outcomes. You won't just track workstreams \u2014 you will own them. You will design and manage contracting programs and workflows, build playbooks and governance frameworks, route and manage complex government deals through stakeholders, handle routine contracting matters under attorney supervision, and support some contract management/contract lifecycle work (including Databricks' GSA MAS). If you are an operationally fierce program manager with government-contracting chops and extraordinary interpersonal skills who wants to be the linchpin to Databricks' pubsec legal function, we want to talk to you. Location: Washington, DC metro area (hybrid). The Impact You Will Have Own the Public Sector Contracting Program: Act as the central driver for US public-sector contracting operations (US Federal/Defense, Defense Industrial Base, and SLED), plus Canada and priority overseas markets. Drive Cross-Functional Deal Execution: Coordinate stakeholders, including sales, deal desk, operations, security, compliance, and finance through a predictable, well-governed pipeline. Keep stakeholders and executives well informed about the work and accountable to deadlines. No surprises, no missed deadlines, and exceptions are handled with aplomb. Manage Pubsec Contracts and Contract Lifecycle: Manage Databricks' pubsec schedules, including our GSA MAS and similar vehicles. Track contracts from RFI to signature to closeout, and support amendments. Build Enablement : Create enablement for Legal and GTM teams so that routine matters can be handled at scale with minimal legal involvement. Build and maintain playbooks, talk tracks, clause libraries, and training that support self-service for sales teams and decrease deal friction. Strengthen Post-Award Obligation Management: Own (in collaboration with Compliance) traceability for non-standard contractual commitments, such as by building obligation matrices, aligning them to accountable owners, systems, and controls across the organization. Scale Internation",
-   "company": "Databricks",
-   "family": "pm",
-   "age_days": 42,
-   "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "no",
-    "reason": "Posting says: \"security clearance\""
-   },
-   "flags": [
-    "Posted 42 days ago"
+   "matches": [
+    "interest in operations roles\",\"experience with data analysis\"]",
+    "gaps"
    ],
-   "source": "greenhouse:databricks",
-   "score": 1.0,
-   "matches": [],
    "gaps": [],
    "actions": [],
-   "score_method": "keywords",
+   "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-04T22:04:05.227010+00:00"
+   "last_seen": "2026-11-05T10:12:52.494030+00:00"
   }
  ]
 }
