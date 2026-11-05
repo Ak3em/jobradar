@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-05T10:12:52.494030+00:00",
+ "generated_at": "2026-11-05T19:44:12.895717+00:00",
  "min_score": 3.5,
  "health": {
   "Stripe": {
-   "fetched": 761,
+   "fetched": 763,
    "kept": 1,
    "error": null
   },
   "Robinhood": {
-   "fetched": 154,
+   "fetched": 151,
    "kept": 1,
    "error": null
   },
@@ -18,44 +18,44 @@
    "error": null
   },
   "Figma": {
-   "fetched": 145,
+   "fetched": 143,
    "kept": 0,
    "error": null
   },
   "Airbnb": {
-   "fetched": 208,
+   "fetched": 203,
    "kept": 0,
    "error": null
   },
   "Databricks": {
-   "fetched": 927,
+   "fetched": 923,
    "kept": 3,
    "error": null
   },
   "Anthropic": {
-   "fetched": 681,
+   "fetched": 680,
    "kept": 3,
    "error": null
   },
   "Plaid": {
-   "fetched": 144,
+   "fetched": 145,
    "kept": 0,
    "error": null
   },
   "Ramp": {
-   "fetched": 171,
+   "fetched": 170,
    "kept": 2,
    "error": null
   },
   "Notion": {
-   "fetched": 148,
+   "fetched": 150,
    "kept": 1,
    "error": null
   }
  },
  "scoring": {
   "scorer": "groq",
-  "scored": 16,
+  "scored": 0,
   "errors": 0,
   "last_error": null,
   "note": null
@@ -70,14 +70,14 @@
    "desc": "P-1453 At Databricks, we are passionate about helping data teams solve the world's toughest problems \u2014 from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business. As an Associate Product Manager, you will join a team that works diligently to understand and solve our customers\u2019 most challenging problems. We're hiring across all of our teams, including AI Platform, Genie, Machine Learning, Unity Catalog, Databricks SQL, ETL, Streaming, and EDA. As part of our 2027 APM cohort, you will have a dedicated manager and mentor as well as connect with product managers, engineers, designers, account teams, other interns, and leaders from across the company. We are hiring for Amsterdam, Belgrade and Berlin. The impact you will have: Deeply understand customer problem space and establish the rails for viable solution space Prototype and test early ideas with customers and engineers to validate direction before the team commits to a build Work with engineers and designers to ship features on the Databricks platformWork with a team to build features for the Databricks platform Own your project end-to-end \u2014 design, build, launch, and iterate on feedbackManage your project end-to-end, including design, code, launch and feedback Build with scale, quality, and security in mind from day oneLearn about building a platform that scales quickly while maintaining quality and security What we look for: You will graduate in Fall 2026 or Spring 2027 with a bachelors or masters degree in computer science or related engineering practice Pursuing a bachelor's or master's in computer science or a related engineering field You've used AI tooling for both personal productivity and development projects You have some first hand experience with SQL and/or Python You're hands-on and learn by doing \u2014 happy to build, test, and iterate your way to an answer You use analytical skills to make data-driven decisions (e.g. analyzing product usage) You can make complex topics simple and communicate nuance to partners (engineers, customers, field) in both written and verbal form You're excited to solve ambiguous problems with a collaborative team You stay curious and keep learning, whether it's a new technology, a customer's domain, or a corner of the product you haven't touched About Databricks Databricks is the Data and AI company. More than 20,000 organizations worldwide \u2014 including adidas, AT&amp;T, Bayer, Block, Mastercard, Rivian, Unilever, and 70% of the Fortune 500 \u2014 rely on the Databricks Data + AI Platform to build and scale data and AI apps, analytics and agents. Headquartered in San Francisco with 30+ offices around the globe, Databricks offers a unified platform that includes Genie, Lakebase, Agent Bricks, Lakeflow, Lakehouse, and Unity Catalog. To learn more, follow Databr",
    "company": "Databricks",
    "family": "pm",
-   "age_days": 33,
+   "age_days": 34,
    "grad_year": "2027",
    "sponsorship": {
     "status": "likely",
     "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
    },
    "flags": [
-    "Posted 33 days ago"
+    "Posted 34 days ago"
    ],
    "source": "greenhouse:databricks",
    "score": 4.0,
@@ -97,7 +97,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-stripe-8202299",
@@ -133,7 +133,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-anthropic-5416829008",
@@ -171,7 +171,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "ab-ramp-b6132946-62e7-4ed4-9b93-f7cbe0e2c1fe",
@@ -207,7 +207,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T22:04:05.227010+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-anthropic-5462893008",
@@ -243,7 +243,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-databricks-8886944002",
@@ -254,7 +254,7 @@
    "desc": "FEQ128R31 Solutions Engineer At Databricks, our core values drive everything we do; a culture of proactiveness and a customer-first mindset fuels our mission to create a unified platform that makes AI and data analytics accessible to everyone in their own context. This role is part of our programmatic effort to develop promising field engineers\u2014offering a launchpad for the next generation of data leaders . We aim to build leaders who will drive both data and business strategy for our customers, leading the front lines of Databricks growth as well. With our Data Intelligence Platform, we make it easy to turn insights into action while encouraging creativity, experimentation, and continuous improvement. You\u2019ll play a key role in this mission, building upon your emerging technical skills in the area of solutions engineering, learn how to apply them in the Databricks platform and show customers how to tackle real-world data challenges. &nbsp;Solutions engineers go further than telling them what's possible; they build working prototypes and advise customer teams on how to get to production. &nbsp;You\u2019ll join a collaborative, customer-obsessed team that thrives on innovation to help customers reach their goals. Come help us change how the world works with data\u2014and shape your future while you're at it! This will be an in-office role and candidates must be based in Chicago, IL. Relocation assistance will not be provided. Recent graduate?: We\u2019d love for you to explore our current internship openings on our careers page and submit your application for our roles designed for new college graduates. More About Databricks YouTube The impact you will have: Form successful relationships with customers throughout your assigned territory, providing technical and business value to Databricks customers in collaboration with Account Executives. Operate as an expert in AI and data analytics to excite customers about Databricks. You will develop into a \u2018champion\u2019 and trusted advisor on multiple areas of architecture, design, and implementation to lead to the successful adoption of the Databricks data and AI platform. Adopt a builder-first approach: move quickly from customer problem to working prototype by writing code, building demos, and creating reusable assets that accelerate customer outcomes.&nbsp; Use AI tools to increase your productivity and drive innovation. Scale best practices in your field and support customers by authoring reference architectures, how-tos, demo applications, and help build the Databricks community in your region by leading workshops, seminars, and meet-ups. Grow your knowledge and expertise to the level of a technical and/or industry specialist. What we look for: The ideal candidate has 2+ years of technical experience in a customer-facing solutions engineering role. Bachelor's degree in Computer Science, Data Science, Information Systems, Engineering, or equivalent experience through work experience Demonstrates a builder mindset: prefer",
    "company": "Databricks",
    "family": "swe",
-   "age_days": 20,
+   "age_days": 21,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "likely",
@@ -279,7 +279,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-coinbase-8233945",
@@ -317,7 +317,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-databricks-8802705002",
@@ -355,7 +355,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-coinbase-8351568",
@@ -366,7 +366,7 @@
    "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . As a Prime Financing Trading Analyst on the Institutional Prime Finance team, you'll help manage and grow Coinbase's institutional financing book across lending, margin, and shorting products. This team is building a full-service prime brokerage platform that enables institutions to deploy trading strategies and achieve capital efficiency at scale. You'll trade day-to-day across the financing desk, optimize net interest margin, and work directly with hedge funds, ETF issuers, market makers, and corporates to deliver bespoke financing solutions. What you'll do: Trade the financing book daily, managing long and short side liquidity across Prime Financing and CB Institutional products. Optimize net interest margin on principal borrow/lend activity through active position management and pricing adjustments. Support asset and client pricing for financing implementation across lending, margin, and shorting products. Engage directly with institutional clients, including hedge funds, ETF issuers, market makers, UHNW individuals, and corporates, to structure financing solutions. Build and refine custom client solutions that improve onboarding, internal processes, and overall client experience. Required Skills and Experience: 2+ years of experience in equity or fixed income financing, prime brokerage, or derivatives at a bank, broker-dealer, or crypto exchange. Proficiency in Python, SQL, or similar programming languages applied to trading analytics, pricing models, or data analysis. Demonstrated knowledge of fiat and crypto funding market fundamentals, including repo, securities lending, and margin financing mechanics. Proven ability to communicate clearly with institutional clients and internal stakeholders while managing competing priorities with urgency. Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality. Pay Transparency Notice: Base salary varies by location (see range below). Total compensation may also include equity and bonus eligibility, and benefits (medical, dental, vision, 401(k)).&nbsp; &nbsp; Annual base salary range (excluding equity and bonus): $126,990 &mdash; $149,400 USD Application Limit: Candidates may submit a maximum of 3 applications within a 6-month period. Equal Opportunity Employer: Coinbase is an Equal Oppor",
    "company": "Coinbase",
    "family": "ops",
-   "age_days": 0,
+   "age_days": 1,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "likely",
@@ -391,7 +391,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-coinbase-8281622",
@@ -426,7 +426,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-robinhood-8226972",
@@ -437,7 +437,7 @@
    "desc": "Join us in building the future of finance. Our mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you\u2019re ready to be at the epicenter of this historic cultural and financial shift, keep reading. About the team + role We are building an elite team, applying frontier technologies to the world's biggest financial problems. We're looking for bold thinkers. Sharp problem-solvers. Builders who are wired to make an impact. Robinhood isn't a place for complacency, it's where ambitious people do the best work of their careers. We're a high-performing, fast-moving team with ethics at the center of everything we do. Expectations are high, and so are the rewards. The Fraud Investigations team helps protect customers and the platform by reviewing suspicious activity, confirming what happened, and taking action to reduce risk. As a Fraud Investigation Analyst, you\u2019ll review fraud alerts, analyze transactional and behavioral signals, and document outcomes in line with internal policy and regulatory requirements. You\u2019ll also route higher-risk cases to the right partners and help limit customer impact through timely, accurate investigations\u2014your work directly supports trust and safety across Robinhood! This role is based in our Denver, CO and Westlake, TX office(s), with in-person attendance expected at least 3 days per week. At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community. Our office experience is intentional, energizing, and designed to fully support high-performing teams. Shifts Available: 10:30am-7pm (local time)&nbsp; Days off: Wednesday/Thursday 6am-2:30pm (local time) Days off: Tuesday/Wednesday&nbsp; What you'll do Review and investigate fraud alerts to assess potential fraudulent activity using common fraud patterns and investigation steps Analyze transactional and behavioral data to make risk-based decisions and complete clear, well-supported case documentation Manage daily alert and case volume to meet quality and service-level targets Partner with product, engineering, legal, compliance, vendor partners, and financial crime teams to gather information and escalate cases when needed Identify recurring fraud trends and suggest specific process improvements based on investigation outcomes What you bring 0\u20132 years of experience in fraud investigations or related financial crime, risk, compliance, or operations work, with exposure to account takeovers, identity theft, or money movement fraud Clear written documentation skills and the ability to explain decisions using evidence from account activity Strong attention to detail and comfort working with multiple data points (transactions, device signals, behavioral indicators) Ability to prioritize work, manage queue volume, and meet defined quality and productivity goals Strong collaboration",
    "company": "Robinhood",
    "family": "ops",
-   "age_days": 14,
+   "age_days": 15,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "likely",
@@ -462,7 +462,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-anthropic-5397704008",
@@ -498,7 +498,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "gh-coinbase-8250032",
@@ -536,7 +536,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "ab-ramp-7e531974-caac-46a2-804e-c6c3140bfda4",
@@ -547,7 +547,7 @@
    "desc": "ABOUT RAMP Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $275B in annualized spend flows in and out of 85,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books. The problems are high-stakes, data-dense, and unforgiving. We hire people with high agency and high urgency. We look for slope over intercept. We care less about where you trained and more about what you\u2019ve built. At Ramp, everyone is a builder who owns problems end to end and makes consequential decisions that shape the outcome. The median Ramp customer saves 7.5% and grows revenue 16% in their first year \u2013 far in excess of businesses operating without Ramp. We believe every ambitious company deserves the same. If you want to build systems that directly shape how companies move and manage billions, Ramp is the place to do it. ABOUT THE ROLE We are looking for an Analyst, Deal Operations to help drive Ramp\u2019s next phase of growth! Reporting to the Senior Manager, Deal Desk, you\u2019ll be a key partner in taking our Sales organization to the next level, responsible for quoting, pricing structure, and contracting for our Sales team. You'll be an integral part of the Deal Operations team with a focus on offering guidance to drive deal execution while complying with company policies and procedures and ensuring consistency to manage risk. You\u2019ll work directly with our Sales, Legal, Accounting, and cross-functional leadership to better streamline efficient workflows and enhance sales productivity. WHAT YOU'LL DO - Quote & contract approvals \u2014 review and approve quotes and contract workflows within policy; escalate exceptions with clear context - Feature & subscription activation \u2014 enable product tiers, configure accounts, and manage trial extensions, and coordinate billing - Policy & process guidance \u2014 be the first line of support for AEs with questions about deal structure, approval requirements, and process - Playbook development \u2014 document what you learn; help build the SOPs and escalation guides that make this function scalable - Drive consistency across deal processes by helping to optimize, streamline, and automate quote-to-cash processes - Serves as a subject matter expert on deal constructs, operational procedures, approval policies, and controls WHAT YOU NEED - 3-5 years in a Deal Desk environment, preferably in a high growth SaaS company. - Experience with Salesforce, CPQ, and other sales-related systems, including pricing and data enrichment tools. - Exceptional communication skills, written and verbal. - Excellent project management instincts, with an ability to manage multiple projects at one time. - You have a \u201cget things done\u201d mentality; you can dissect problems, identify solutions, and drive these solutions to completion with a high degree of autonomy. BENEFITS AVAILABLE TO ALL FULL-TIME RAMP EMPLOYEES (GLOBAL) - Flexible PTO - Centralized home-",
    "company": "Ramp",
    "family": "ops",
-   "age_days": 20,
+   "age_days": 21,
    "grad_year": "unspecified",
    "sponsorship": {
     "status": "likely",
@@ -572,45 +572,7 @@
    ],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
-  },
-  {
-   "id": "gh-coinbase-8248775",
-   "title": "Broker Dealer Operations, Associate",
-   "url": "https://www.coinbase.com/careers/positions/8248775?gh_jid=8248775",
-   "location": "Remote - USA",
-   "posted": "2026-10-02T15:18:52-04:00",
-   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . As an Associate, Broker Dealer Operations, you'll join the Coinbase Capital Markets team within Finance and help run the daily operational engine behind our U.S. equities brokerage experience. This team keeps customer accounts, trades, cash, positions, transfers, and corporate actions accurate, controlled, and scalable. You'll execute core broker-dealer workflows, investigate exceptions, and drive improvements that make the operation safer and more efficient for millions of customers. What you'll do: Execute daily trade, position, balance, and cash reconciliations between Coinbase and Apex records, investigating and resolving breaks with full documentation. Support customer account onboarding and maintenance workflows, including documentation review, status follow-up, and exception escalation. Process inbound and outbound securities transfers (ACATs) end-to-end, from intake review and eligibility checks through submission, tracking, and exception resolution. Monitor operational alerts and exception queues, prioritize customer- and risk-impacting issues, and coordinate remediation across Engineering, Product, Trading, CX, Compliance, Finance, and Apex. Support corporate action operations by reviewing event notices, monitoring deadlines, validating allocations, and investigating post-event discrepancies. Identify recurring failure modes and propose practical improvements to reduce manual work, shorten resolution time, and improve customer outcomes. Required skills and experience: 2+ years in financial services operations, brokerage operations, clearing and settlement, trade support, or a related operational control function. Working knowledge of U.S. equities trade lifecycle concepts, including order processing, settlement, positions, cash movements, corporate actions, and account transfers. Demonstrated experience investigating data breaks or operational exceptions across multiple systems and driving issues to documented resolution. Proven ability to follow documented procedures consistently in a regulated environment while exercising sound judgment on exceptions outside the runbook. Familiarity with clearing platforms (e.g., Apex Clearing), Jira, SQL, or workflow-automation tools used in brokerage operations. Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workf",
-   "company": "Coinbase",
-   "family": "ops",
-   "age_days": 33,
-   "grad_year": "unspecified",
-   "sponsorship": {
-    "status": "likely",
-    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
-   },
-   "flags": [
-    "Posted 33 days ago"
-   ],
-   "source": "greenhouse:coinbase",
-   "score": 1.0,
-   "matches": [
-    "SQL",
-    "Python"
-   ],
-   "gaps": [
-    "financial services operations experience",
-    "knowledge of U.S. equities trade lifecycle",
-    "experience with clearing platforms (e.g., Apex)"
-   ],
-   "actions": [
-    "secure an internship or entry\u2011level role in brokerage or financial operations to build relevant experience",
-    "complete a focused study or certification on U.S. equities trade lifecycle and settlement processes",
-    "learn and get hands\u2011on exposure to clearing platforms such as Apex, possibly via online courses or mentorship"
-   ],
-   "score_method": "groq",
-   "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   },
   {
    "id": "ab-notion-92de7ece-b7d9-4b2a-b9cb-b978cc690a46",
@@ -640,7 +602,45 @@
    "actions": [],
    "score_method": "groq",
    "first_seen": "2026-11-04T19:36:08.016984+00:00",
-   "last_seen": "2026-11-05T10:12:52.494030+00:00"
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
+  },
+  {
+   "id": "gh-coinbase-8248775",
+   "title": "Broker Dealer Operations, Associate",
+   "url": "https://www.coinbase.com/careers/positions/8248775?gh_jid=8248775",
+   "location": "Remote - USA",
+   "posted": "2026-10-02T15:18:52-04:00",
+   "desc": "Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it\u2019s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called \u201csurges.\u201d&nbsp; learn more about working at Coinbase . As an Associate, Broker Dealer Operations, you'll join the Coinbase Capital Markets team within Finance and help run the daily operational engine behind our U.S. equities brokerage experience. This team keeps customer accounts, trades, cash, positions, transfers, and corporate actions accurate, controlled, and scalable. You'll execute core broker-dealer workflows, investigate exceptions, and drive improvements that make the operation safer and more efficient for millions of customers. What you'll do: Execute daily trade, position, balance, and cash reconciliations between Coinbase and Apex records, investigating and resolving breaks with full documentation. Support customer account onboarding and maintenance workflows, including documentation review, status follow-up, and exception escalation. Process inbound and outbound securities transfers (ACATs) end-to-end, from intake review and eligibility checks through submission, tracking, and exception resolution. Monitor operational alerts and exception queues, prioritize customer- and risk-impacting issues, and coordinate remediation across Engineering, Product, Trading, CX, Compliance, Finance, and Apex. Support corporate action operations by reviewing event notices, monitoring deadlines, validating allocations, and investigating post-event discrepancies. Identify recurring failure modes and propose practical improvements to reduce manual work, shorten resolution time, and improve customer outcomes. Required skills and experience: 2+ years in financial services operations, brokerage operations, clearing and settlement, trade support, or a related operational control function. Working knowledge of U.S. equities trade lifecycle concepts, including order processing, settlement, positions, cash movements, corporate actions, and account transfers. Demonstrated experience investigating data breaks or operational exceptions across multiple systems and driving issues to documented resolution. Proven ability to follow documented procedures consistently in a regulated environment while exercising sound judgment on exceptions outside the runbook. Familiarity with clearing platforms (e.g., Apex Clearing), Jira, SQL, or workflow-automation tools used in brokerage operations. Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workf",
+   "company": "Coinbase",
+   "family": "ops",
+   "age_days": 34,
+   "grad_year": "unspecified",
+   "sponsorship": {
+    "status": "likely",
+    "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."
+   },
+   "flags": [
+    "Posted 34 days ago"
+   ],
+   "source": "greenhouse:coinbase",
+   "score": 1.0,
+   "matches": [
+    "SQL",
+    "Python"
+   ],
+   "gaps": [
+    "financial services operations experience",
+    "knowledge of U.S. equities trade lifecycle",
+    "experience with clearing platforms (e.g., Apex)"
+   ],
+   "actions": [
+    "secure an internship or entry\u2011level role in brokerage or financial operations to build relevant experience",
+    "complete a focused study or certification on U.S. equities trade lifecycle and settlement processes",
+    "learn and get hands\u2011on exposure to clearing platforms such as Apex, possibly via online courses or mentorship"
+   ],
+   "score_method": "groq",
+   "first_seen": "2026-11-04T19:36:08.016984+00:00",
+   "last_seen": "2026-11-05T19:44:12.895717+00:00"
   }
  ]
 }
