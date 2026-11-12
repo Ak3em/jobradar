@@ -43,7 +43,9 @@ jobs:
         if: hashFiles('alerts.md') != ''
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue create --title "JobRadar: new matches $(date -u +%F)" --body-file alerts.md --label jobradar || gh issue create --title "JobRadar: new matches $(date -u +%F)" --body-file alerts.md
+        run: |
+          T="JobRadar - new matches $(date -u +%F)"
+          gh issue create --title "$T" --body-file alerts.md --label jobradar || gh issue create --title "$T" --body-file alerts.md
   # A push made with GITHUB_TOKEN never triggers other workflows, so deploy from here
   deploy:
     needs: scan
