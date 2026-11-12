@@ -1,0 +1,45 @@
+name: pages
+# Publishes only the site files. config/ (resumes, profile) is never served.
+# Settings > Pages > Source: GitHub Actions.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "app.js"
+      - "ux.js"
+      - "ux.css"
+      - "*.html"
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Build site folder
+        run: |
+          mkdir -p _site/data
+          cp *.html *.js *.css _site/ 2>/dev/null || true
+          cp data/jobs.json _site/data/
+          touch _site/.nojekyll
+          # Guard: fail if anything private slipped in
+          if find _site -path '*config*' -o -name 'scores.json' -o -name '*.md' | grep -q .; then echo "Private file in _site"; exit 1; fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
