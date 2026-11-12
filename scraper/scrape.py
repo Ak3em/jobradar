@@ -37,51 +37,204 @@ def fetch_ashby(slug):
         yield dict(id=f"ab-{slug}-{j['id']}", title=j["title"], url=j.get("jobUrl", ""), location=j.get("location", ""),
                    posted=j.get("publishedAt"), desc=clean(j.get("descriptionPlain") or j.get("descriptionHtml")))
 
-FETCH = {"greenhouse": fetch_greenhouse, "lever": fetch_lever, "ashby": fetch_ashby}
+def wd_posted(s):
+    """Workday gives 'Posted Today' / 'Posted 3 Days Ago' / 'Posted 30+ Days Ago'."""
+    m = re.search(r"(\d+)", s or "")
+    d = 0 if re.search(r"today|yesterday", s or "", re.I) and not m else int(m.group(1)) if m else None
+    return None if d is None else datetime.fromtimestamp(NOW.timestamp() - d * 86400, timezone.utc).isoformat()
+
+def fetch_workday(slug):
+    """slug = "tenant|wdN|site". Searches a few entry-level terms, fetches full text only for plausible titles."""
+    t, w, site = slug.split("|")
+    base = f"https://{t}.{w}.myworkdayjobs.com/wday/cxs/{t}/{site}"
+    seen = set()
+    for q in S.get("workday_queries", ["new grad", "entry level", "early career", "associate"]):
+        for off in (0, 20):
+            r = requests.post(f"{base}/jobs", json={"appliedFacets": {}, "limit": 20, "offset": off, "searchText": q}, headers=HDR, timeout=30)
+            r.raise_for_status()
+            posts = r.json().get("jobPostings", [])
+            for p in posts:
+                path = p.get("externalPath", "")
+                if path in seen or EXCL_TITLE.search(p.get("title", "")) or not family(p.get("title", "")): continue
+                seen.add(path)
+                info = get(base + path).json().get("jobPostingInfo", {})
+                yield dict(id=f"wd-{t}-{path.rsplit('_', 1)[-1]}", title=p["title"], url=info.get("externalUrl") or f"https://{t}.{w}.myworkdayjobs.com/{site}{path}",
+                           location=info.get("location") or p.get("locationsText", ""), posted=wd_posted(p.get("postedOn")), desc=clean(info.get("jobDescription")))
+                time.sleep(0.3)
+            if len(posts) < 20: break
+
+SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json"
+SIMPLIFY_NO = {"U.S. Citizenship is Required", "Does Not Offer Sponsorship"}
+def fetch_simplify(_slug):
+    """Community-curated new-grad list. No description, but every row is already new-grad and has a sponsorship tag."""
+    cats, max_age = set(S.get("simplify_categories", [])), S.get("simplify_max_age_days", 21)
+    for j in get(SIMPLIFY_URL).json():
+        if not (j.get("active") and j.get("is_visible", True)) or (cats and j.get("category") not in cats): continue
+        posted = datetime.fromtimestamp(j["date_posted"], timezone.utc).isoformat() if j.get("date_posted") else None
+        if posted and age_days(posted) > max_age: continue
+        yield dict(id=f"sj-{j['id']}", title=j["title"], url=j["url"], location="; ".join(j.get("locations") or []), posted=posted, desc="",
+                   company=j.get("company_name"), newgrad=True, simplify_sponsor=j.get("sponsorship"))
+
+FETCH = {"greenhouse": fetch_greenhouse, "lever": fetch_lever, "ashby": fetch_ashby, "workday": fetch_workday, "simplify": fetch_simplify}
 
 # ---------- filters ----------
-EXCL_TITLE = re.compile(r"\b(intern|internship|senior|sr\.?|staff|principal|lead|director|vp|vice president|head of|manager ii|iii|iv)\b", re.I)
+EXCL_TITLE = re.compile(r"\b(intern\w*|co-?op|ph\.?\s?d\.?|master'?s|senior|sr\.?|staff|principal|lead|director|vp|vice president|head of|manager ii|iii|iv)\b", re.I)
 FAMILIES = {
     "swe": re.compile(r"software|developer|backend|frontend|full.?stack|machine learning|data engineer|\bsde\b|engineer", re.I),
     "pm": re.compile(r"product manager|program manager|technical program|\btpm\b|product management", re.I),
     "ops": re.compile(r"operations|operational|analyst|underwriting|claims|business analyst", re.I),
 }
-ENTRY = re.compile(r"new grad|new graduate|university grad|graduate program|early career|early talent|entry.?level|class of 2027|2027|recent graduate|associate|analyst|engineer (i|1)\b|rotational", re.I)
+# Entry-level proof: either the title says so, or the description says so in strong words.
+# Generic words ("analyst", "associate", "engineer") in the description no longer count.
+ENTRY_TITLE = re.compile(r"new grad|new graduate|university|graduate|early career|early talent|entry.?level|\b2027\b|recent grad|associate|junior|\bjr\.?\b|"
+                         r"rotational|apprentice|\b(engineer|developer|analyst|swe|sde)\s*(i|1)\b|\bapm\b|\blevel 1\b", re.I)
+ENTRY_DESC = re.compile(r"new grads?\b|new graduates?|recent (college )?graduates?|class of 2027|(graduat\w*|grad date)[^.]{0,30}2027|early[- ]career|entry[- ]level|"
+                        r"\b0\s*(-|to|–)\s*[12]\+?\s*years|no (prior |professional )?experience (is )?required", re.I)
+MANAGER = re.compile(r"\bmanager\b", re.I)
+JUNIOR_MGR = re.compile(r"associate|new grad|graduate|rotational|entry|early career|\bapm\b|\b(i|1)\b", re.I)
 OTHER_YEAR = re.compile(r"(class of|graduat\w*( in| by)?|summer|fall)\s*(2025|2026|2028)", re.I)
 YEARS = re.compile(r"(\d+)\+?\s*(?:-\s*\d+\s*)?years?[^.]{0,40}experience", re.I)
-NEG = re.compile(r"(no|not|unable to|cannot|can't|won't|will not)\s+(offer\s+|provide\s+|able to\s+)?(visa\s+)?sponsor\w*|without (the need for )?(current or future )?(visa )?sponsorship|u\.?s\.? citizens? only|security clearance|must be a (u\.?s\.? )?citizen", re.I)
-POS = re.compile(r"(visa|h-?1b|work) sponsorship (is )?(available|provided|offered)|will (provide )?sponsor|we (do )?sponsor|sponsor(s)? (work )?visas|\bf-?1\b|stem opt", re.I)
+# Negative wording always wins over positive wording
+NEG = re.compile(r"(no|not|unable to|cannot|can't|won't|will not|does not|do not|doesn't|don't)\s+(currently\s+)?(offer\s+|provide\s+|be able to\s+|able to\s+|support\s+)?(any\s+)?(visa\s+|immigration\s+|employment\s+)?sponsor\w*"
+                 r"|not eligible for (visa |immigration )?sponsorship|sponsorship (is )?not (available|offered|provided)"
+                 r"|without (the need for )?(current or future |present or future )?(visa |immigration |employer )?sponsorship"
+                 r"|u\.?s\.? citizens? only|security clearance|must be a (u\.?s\.? )?citizen|(f-?1|opt|cpt)\s+(candidates|students|holders)?\s*(are )?not eligible", re.I)
+# Each type needs visa context so "CPT codes" (medical billing) or "opt in" never count
+SPONSOR_TYPES = {
+    "h1b": re.compile(r"\bh-?1-?b\b", re.I),
+    "stem_opt": re.compile(r"\bstem[\s-]+opt\b", re.I),
+    "opt": re.compile(r"\bOPT\b|(?i:optional practical training)"),
+    "cpt": re.compile(r"\bCPT\b|(?i:curricular practical training)"),
+    "general": re.compile(r"(visa|immigration|work) sponsorship (is )?(available|provided|offered)|will (provide |offer )?(visa |immigration )?sponsor|we (do )?sponsor (work )?visas|we do sponsor|sponsor(s|ship)? (work |employment )?visas|offers? (visa |immigration )?sponsorship", re.I),
+}
+# Positive mention with a hedge ("not for every role") still counts, but gets a caveat
+VISA_CTX = re.compile(r"f-?1|visa|practical training|work authori|student|sponsor|international", re.I)
+def visa_hit(rx, text):
+    """First match whose surrounding 80 chars talk about visas. Skips CPT codes, opt-in, etc."""
+    for m in rx.finditer(text):
+        if len(m.group(0)) > 4: return m  # spelled-out phrase is already specific
+        if VISA_CTX.search(text[max(0, m.start() - 80): m.end() + 80].replace(m.group(0), " ")): return m
+    return None
+HEDGE = re.compile(r"not (able to )?(successfully )?sponsor\w* (visas )?for every|aren't able to (successfully )?sponsor\w* (visas )?for every|case[- ]by[- ]case|depending on (the )?role|may not be able to sponsor", re.I)
+
+def sponsorship(text):
+    m = NEG.search(text)
+    # "aren't able to sponsor for every role" is a hedge, not a no
+    if m and not HEDGE.search(text[max(0, m.start() - 60): m.end() + 60]):
+        return {"status": "no", "types": [], "quote": m.group(0), "caveat": None, "reason": f"Posting says: \"{m.group(0)}\""}
+    types, quote = [], None
+    for k, rx in SPONSOR_TYPES.items():
+        hit = visa_hit(rx, text) if k in ("opt", "cpt") else rx.search(text)
+        if hit:
+            types.append(k)
+            if not quote:
+                s, e = max(0, hit.start() - 60), min(len(text), hit.end() + 80)
+                quote = ("..." if s else "") + text[s:e].strip() + ("..." if e < len(text) else "")
+    if not types: return {"status": "unstated", "types": [], "quote": None, "caveat": None, "reason": "Not stated in posting."}
+    h = HEDGE.search(text)
+    return {"status": "yes", "types": types, "quote": quote, "caveat": "Not guaranteed for every role" if h else None,
+            "reason": f"Posting says: \"{quote}\""}  # reason kept for the current UI
+
+# ---------- US locations ----------
+STATES = {"AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware",
+          "DC":"District of Columbia","FL":"Florida","GA":"Georgia","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas",
+          "KY":"Kentucky","LA":"Louisiana","ME":"Maine","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi",
+          "MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York",
+          "NC":"North Carolina","ND":"North Dakota","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PA":"Pennsylvania","RI":"Rhode Island","SC":"South Carolina",
+          "SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VA":"Virginia","WA":"Washington","WV":"West Virginia",
+          "WI":"Wisconsin","WY":"Wyoming"}
+NAME2CODE = {v.lower(): k for k, v in STATES.items()}
+CITIES = {"new york city":"NY","nyc":"NY","manhattan":"NY","brooklyn":"NY","san francisco":"CA","sf":"CA","bay area":"CA","los angeles":"CA","san jose":"CA",
+          "palo alto":"CA","mountain view":"CA","menlo park":"CA","sunnyvale":"CA","san diego":"CA","oakland":"CA","seattle":"WA","bellevue":"WA",
+          "redmond":"WA","austin":"TX","dallas":"TX","houston":"TX","plano":"TX","irving":"TX","san antonio":"TX","westlake":"TX","philadelphia":"PA",
+          "pittsburgh":"PA","chicago":"IL","boston":"MA","cambridge":"MA","denver":"CO","atlanta":"GA","miami":"FL","washington dc":"DC","washington d.c.":"DC",
+          "salt lake city":"UT","phoenix":"AZ","charlotte":"NC","raleigh":"NC","nashville":"TN","minneapolis":"MN","jersey city":"NJ","columbus":"OH"}
+NYC = re.compile(r"new york city|\bnyc\b|manhattan|brooklyn|new york,?\s*(ny|new york)\b|^new york$", re.I)
+def us_word(s): return bool(re.search(r"united states|\busa\b|\bu\.s\.", s, re.I) or re.search(r"\bUS\b", s))
+NON_US = re.compile(r"\b(canada|uk|united kingdom|london|ireland|dublin|india|bangalore|bengaluru|singapore|germany|berlin|france|paris|poland|warsaw|"
+                    r"japan|tokyo|australia|sydney|brazil|mexico|luxembourg|serbia|taiwan|netherlands|amsterdam|spain|israel|toronto|vancouver|emea|apac|latam|europe)\b", re.I)
+TOP = S.get("region_order", ["TX", "CA", "WA", "NYC", "PA", "Remote US", "Other US"])
+
+def parse_place(p, desc):
+    """One location string -> (state or None, remote_us bool). (None, False) means no US state found."""
+    low = p.lower().strip(" -()")
+    if not low or NON_US.search(low): return None, False
+    if "remote" in low or "anywhere" in low:
+        rest = re.sub(r"(?i)remote|anywhere|[-(),:]", " ", p).strip()
+        code = NAME2CODE.get(rest.lower()) or (rest.upper() if rest.upper() in STATES and len(rest) == 2 else None)
+        if code or us_word(rest): return code, True
+        # Bare "Remote": only US if the posting says so
+        if not rest and re.search(r"(?i:united states)|\bU\.S\.|\bUSA\b", desc): return None, True
+        return None, False
+    if re.search(r"washington,?\s*d\.?c\.?|district of columbia", low): return "DC", False
+    m = re.search(r",\s*([A-Za-z]{2})\b", p)
+    if m and m.group(1).upper() in STATES: return m.group(1).upper(), False
+    for name, code in NAME2CODE.items():
+        if re.search(rf"\b{re.escape(name)}\b", low): return code, False
+    for city, code in CITIES.items():
+        if re.search(rf"\b{re.escape(city)}\b", low): return code, False
+    return None, False
+
+def us_location(loc, desc):
+    """Returns {"us", "states", "remote_us", "regions"} where regions uses the settings.region_order buckets."""
+    parts = [x for x in re.split(r"\s*(?:;|\||/|\bor\b|\n)\s*", loc or "") if x.strip()]
+    states, remote, us_any = [], False, False
+    for p in parts:
+        st, rem = parse_place(p, desc)
+        if st or rem: us_any = True
+        elif us_word(p) and not NON_US.search(p): us_any = True  # "United States" with no state
+        if st and st not in states: states.append(st)
+        remote = remote or rem
+    nyc = bool(NYC.search(loc or ""))
+    regions = []
+    for st in states:
+        b = "NYC" if st == "NY" and nyc else st if st in TOP else "Other US"
+        if b not in regions: regions.append(b)
+    if remote: regions.append("Remote US")
+    if us_any and not regions: regions.append("Other US")
+    regions.sort(key=lambda r: TOP.index(r) if r in TOP else len(TOP))
+    return {"us": us_any, "states": states, "remote_us": remote, "regions": regions}
+
 EVERGREEN = re.compile(r"talent (community|pool|network)|future opportunities|general application|evergreen|pipeline of", re.I)
 
+# Hardware / physical engineering is out of scope for a CS major
+HARDWARE = re.compile(r"asic|silicon|hardware|mechanical|electrical|controls?\b|\brf\b|analog|circuit|chip|fpga|pcb|thermal|manufacturing|civil|chemical|"
+                      r"structural|propulsion|avionics|validation|verification|layout|power (systems|electronics)|process engineer|facilities", re.I)
 def family(title):
+    if HARDWARE.search(title): return None
     for k, rx in FAMILIES.items():
         if rx.search(title): return k
-def sponsorship(text, h1b_hint):
-    m = NEG.search(text)
-    if m: return {"status": "no", "reason": f"Posting says: \"{m.group(0)}\""}
-    m = POS.search(text) or re.search(r"\bOPT\b", text)
-    if m: return {"status": "yes", "reason": f"Posting mentions: \"{m.group(0)}\""}
-    if h1b_hint == "yes": return {"status": "likely", "reason": "Not stated in posting. Company has a history of H-1B filings (verify)."}
-    return {"status": "unclear", "reason": "Not stated in posting."}
 def age_days(posted):
     try: return (NOW - datetime.fromisoformat(posted.replace("Z", "+00:00"))).days
     except Exception: return None
 
 def keep(j, company):
     t, text = j["title"], j["title"] + " " + j["desc"]
-    if EXCL_TITLE.search(t) or any(x.lower() in j["location"].lower() for x in S["exclude_locations"]): return None
+    if EXCL_TITLE.search(t) or (MANAGER.search(t) and not JUNIOR_MGR.search(t)): return None
+    geo = us_location(j["location"], j["desc"])
+    if not geo["us"]: return "not_us"
     fam = family(t)
-    if not fam or not ENTRY.search(t + " " + j["desc"][:1500]): return None
+    if not fam: return None
+    if not (j.get("newgrad") or ENTRY_TITLE.search(t) or ENTRY_DESC.search(j["desc"][:4000])): return None
     if any(int(n) >= 3 for n in YEARS.findall(j["desc"])): return None
     if OTHER_YEAR.search(text) and "2027" not in text: return None
     a = age_days(j["posted"]) if j["posted"] else None
     if a is not None and a > S["max_age_days"]: return None
-    flags = []
+    sp = sponsorship(text)
+    if j.get("simplify_sponsor") in SIMPLIFY_NO and sp["status"] != "yes":
+        sp = {"status": "no", "types": [], "quote": j["simplify_sponsor"], "caveat": None, "reason": f"SimplifyJobs: {j['simplify_sponsor']}"}
+    # Three groups: says yes (kept, ranked first), doesn't say (kept, neutral), says no (dropped)
+    if sp["status"] == "no": return "no_sponsor"
+    if sp["status"] == "unstated":
+        hint = " Company has filed H-1Bs before (verify)." if company.get("h1b") == "yes" else ""
+        sp = dict(sp, status="unclear", reason="Posting doesn't mention sponsorship." + hint)
+    flags = [sp["caveat"]] if sp["caveat"] else []
+    if not j["desc"]: flags.append("Scored from title only (no description in source)")
     if a is None: flags.append("Age unknown")
     elif a > S["flag_age_days"]: flags.append(f"Posted {a} days ago")
     if EVERGREEN.search(text): flags.append("Evergreen wording (possible ghost job)")
-    return dict(j, company=company["name"], family=fam, age_days=a, grad_year="2027" if "2027" in text else "unspecified",
-                sponsorship=sponsorship(text, company.get("h1b")), flags=flags, source=f"{company['ats']}:{company['slug']}")
+    return dict(j, company=j.get("company") or company["name"], family=fam, age_days=a, grad_year="2027" if "2027" in text else "unspecified",
+                sponsorship=sp, location_info=geo, company_h1b=company.get("h1b"), flags=flags, source=f"{company['ats']}:{company['slug']}")
 
 def link_ok(url):
     try:
@@ -94,10 +247,30 @@ def fallback_score(desc):
     hits = [s for s in skills if s in desc.lower()]
     return round((1 + 4 * min(len(hits) / 5, 1)) * 2) / 2, [f"Mentions {h}" for h in hits[:2]], []
 
+# ---------- resumes ----------
+# One plain-text resume per track in config/resumes/<track>.md (written by the Resumes page). profile.json is the fallback.
+RESUME_DIR = CFG / "resumes"
+TRACKS = ("swe", "pm", "ops")
+def load_resumes():
+    out = {}
+    for tr in TRACKS:
+        f = RESUME_DIR / f"{tr}.md"
+        if f.exists() and f.read_text().strip(): out[tr] = f.read_text().strip()[:S.get("max_resume_chars", 4000)]
+    return out
+RESUMES = load_resumes()
+def candidate_for(j):
+    """(track used, candidate text) for this job's family."""
+    if j["family"] in RESUMES: return j["family"], RESUMES[j["family"]]
+    return "profile", json.dumps(PROFILE)
+def md5(s): return hashlib.md5(s.encode()).hexdigest()
+def norm_url(u): return re.sub(r"(/apply)?/?(\?.*)?$", "", (u or "").lower())
+
 def score_prompt(j, max_desc=6000):
     return ("Score how well this candidate fits this job from 1 to 5 in 0.5 steps. Be strict and honest. "
             "Return JSON only, no prose: {\"score\": number, \"matches\": [two short strings], \"gaps\": [up to three short strings], \"actions\": [one concrete next step per gap, same order]}.\n\n"
-            f"CANDIDATE:\n{json.dumps(PROFILE)}\n\nJOB: {j['title']} at {j['company']}\n{j['desc'][:max_desc]}")
+            "The candidate is an international student (F-1) who will need OPT and later H-1B sponsorship; do not penalize for that.\n\n"
+            f"CANDIDATE:\n{candidate_for(j)[1]}\n\nJOB: {j['title']} at {j['company']}\n"
+            + (j['desc'][:max_desc] or "(No description available. Judge from the title and company only, and say so in gaps.)"))
 
 def parse_score(text):
     m = re.search(r"\{.*\}", text, re.S)
@@ -145,51 +318,83 @@ def main():
     cache_path = DATA / "scores.json"
     cache = load(cache_path) if cache_path.exists() else {}
     scorer, score_fn, key = pick_scorer()
-    health, jobs, seen = {}, [], set()
+    alerted = {j["id"] for j in old.get("jobs", []) if j.get("alerted")}
+    health, jobs, seen, urls = {}, [], set(), set()
     scoring = {"scorer": scorer or "keywords", "scored": 0, "errors": 0, "last_error": None,
                "note": None if scorer else "No GROQ_API_KEY or GEMINI_API_KEY set. Using keyword fallback."}
 
     for c in COMPANIES:
         try:
             raw = list(FETCH[c["ats"]](c["slug"]))
-            kept = [k for j in raw if (k := keep(j, c)) and k["id"] not in seen]
-            health[c["name"]] = {"fetched": len(raw), "kept": len(kept), "error": None}
+            kept, drops = [], {"not_us": 0, "no_sponsor": 0}
+            for j in raw:
+                k = keep(j, c)
+                if isinstance(k, str): drops[k] += 1
+                elif k and k["id"] not in seen and norm_url(k["url"]) not in urls: kept.append(k); urls.add(norm_url(k["url"]))
+            health[c["name"]] = {"fetched": len(raw), "kept": len(kept), "dropped_not_us": drops["not_us"],
+                                 "dropped_no_sponsor": drops["no_sponsor"], "error": None}
             for k in kept: seen.add(k["id"]); jobs.append(k)
         except Exception as e:
             health[c["name"]] = {"fetched": 0, "kept": 0, "error": str(e)[:160]}
         time.sleep(1)
 
-    if S["verify_links"]: jobs = [j for j in jobs if link_ok(j["url"])]
+    # Direct boards first (they have full text); the big SimplifyJobs list is too large to link-check every run
+    if S["verify_links"]: jobs = [j for j in jobs if j["id"].startswith("sj-") or link_ok(j["url"])]
+    # The AI budget per run is limited, so spend it on "says yes" and the newest postings first
+    jobs.sort(key=lambda j: (j["sponsorship"]["status"] != "yes", j["age_days"] if j["age_days"] is not None else 999))
 
     new_scores, fails_in_row = 0, 0
     for j in jobs:
-        h = hashlib.md5((j["title"] + j["desc"]).encode()).hexdigest()
+        h = md5(j["title"] + j["desc"])
+        track, cand = candidate_for(j)
+        rh = md5(cand)
         c = cache.get(j["id"])
-        stale = not c or c["hash"] != h
-        # Upgrade keyword scores once an AI scorer is available
-        needs_ai = stale or (key and c.get("method") == "keywords")
+        fresh = c and c["hash"] == h and c.get("rhash") == rh
+        # Re-score when the job or its resume changed, or to upgrade a keyword score
+        needs_ai = not fresh or c.get("method") == "keywords"
         if needs_ai and key and new_scores < S["max_new_scores_per_run"] and fails_in_row < 3:
             try:
                 s, m, g, a = score_fn(j, key); new_scores += 1; fails_in_row = 0
-                c = {"hash": h, "score": s, "matches": m, "gaps": g, "actions": a, "method": scorer}
+                c = {"hash": h, "rhash": rh, "score": s, "matches": m, "gaps": g, "actions": a, "method": scorer}
+                fresh = True
                 time.sleep(S["seconds_between_scores"])
             except Exception as e:
                 fails_in_row += 1; scoring["errors"] += 1; scoring["last_error"] = str(e)[:240]
                 print("Scoring error:", e, file=sys.stderr)
-        if not c or c["hash"] != h:
-            s, m, g = fallback_score(j["desc"]); c = {"hash": h, "score": s, "matches": m, "gaps": g, "method": "keywords"}
+        if not fresh and not (c and c.get("method") not in (None, "keywords")):
+            # No usable AI score: keyword fallback
+            s, m, g = fallback_score(j["desc"] or j["title"]); c = {"hash": h, "rhash": rh, "score": s, "matches": m, "gaps": g, "method": "keywords"}
+            fresh = True
+        # else: keep the older AI score until the next run can refresh it
         cache[j["id"]] = c
-        j.update(score=c["score"], matches=c["matches"], gaps=c["gaps"], actions=c.get("actions", []), score_method=c["method"])
+        j.update(score=c["score"], matches=c["matches"], gaps=c["gaps"], actions=c.get("actions", []), score_method=c["method"],
+                 resume_track=track, score_stale=not fresh)
         j["first_seen"] = first_seen.get(j["id"]) or NOW.isoformat()
         j["last_seen"] = NOW.isoformat()
         j["desc"] = j["desc"][:3000]
 
-    jobs.sort(key=lambda j: (-j["score"], j["age_days"] if j["age_days"] is not None else 999))
+    jobs.sort(key=lambda j: (-j["score"], j["sponsorship"]["status"] != "yes", j["age_days"] if j["age_days"] is not None else 999))
     scoring["scored"] = new_scores
+    # Alerts: each strong match is announced once, the first run it clears min_score with an AI score
+    fresh_hits = []
+    for j in jobs:
+        j["alerted"] = j["id"] in alerted
+        if not j["alerted"] and j["score"] >= S["min_score"] and j["score_method"] != "keywords":
+            j["alerted"] = True; fresh_hits.append(j)
+    alert_file = ROOT / "alerts.md"
+    if fresh_hits:
+        lines = [f"{len(fresh_hits)} new match{'es' if len(fresh_hits) > 1 else ''} at or above {S['min_score']}.\n"]
+        for j in fresh_hits[:30]:
+            sp = j["sponsorship"]; tag = "Says it sponsors" if sp["status"] == "yes" else "Sponsorship not stated"
+            lines.append(f"- **{j['score']}** [{j['title']}]({j['url']}) at {j['company']} ({', '.join(j['location_info']['regions'])}). {tag}.")
+        alert_file.write_text("\n".join(lines) + "\n")
+    elif alert_file.exists(): alert_file.unlink()
     cache = {k: v for k, v in cache.items() if k in seen}
     DATA.mkdir(exist_ok=True)
     cache_path.write_text(json.dumps(cache))
-    (DATA / "jobs.json").write_text(json.dumps({"generated_at": NOW.isoformat(), "min_score": S["min_score"], "health": health, "scoring": scoring, "jobs": jobs}, indent=1))
+    (DATA / "jobs.json").write_text(json.dumps({"generated_at": NOW.isoformat(), "min_score": S["min_score"], "health": health, "scoring": scoring,
+        "resumes": {tr: {"present": tr in RESUMES, "chars": len(RESUMES.get(tr, ""))} for tr in TRACKS},
+        "regions": TOP, "jobs": jobs}, indent=1))
     print(f"Wrote {len(jobs)} jobs. Scorer: {scoring['scorer']}, AI-scored this run: {new_scores}, errors: {scoring['errors']}. "
           f"Sources with errors: {[k for k, v in health.items() if v['error']]}")
     if scoring["last_error"]: print("Last scoring error:", scoring["last_error"])

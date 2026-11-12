@@ -58,5 +58,208 @@
     "ats": "ashby",
     "slug": "notion",
     "h1b": "yes"
+  },
+  {
+    "name": "SimplifyJobs New Grad list",
+    "ats": "simplify",
+    "slug": "new-grad"
+  },
+  {
+    "name": "Datadog",
+    "ats": "greenhouse",
+    "slug": "datadog",
+    "h1b": "yes"
+  },
+  {
+    "name": "Pinterest",
+    "ats": "greenhouse",
+    "slug": "pinterest",
+    "h1b": "yes"
+  },
+  {
+    "name": "Reddit",
+    "ats": "greenhouse",
+    "slug": "reddit",
+    "h1b": "yes"
+  },
+  {
+    "name": "Roblox",
+    "ats": "greenhouse",
+    "slug": "roblox",
+    "h1b": "yes"
+  },
+  {
+    "name": "Lyft",
+    "ats": "greenhouse",
+    "slug": "lyft",
+    "h1b": "yes"
+  },
+  {
+    "name": "Instacart",
+    "ats": "greenhouse",
+    "slug": "instacart",
+    "h1b": "yes"
+  },
+  {
+    "name": "Affirm",
+    "ats": "greenhouse",
+    "slug": "affirm",
+    "h1b": "yes"
+  },
+  {
+    "name": "Chime",
+    "ats": "greenhouse",
+    "slug": "chime",
+    "h1b": "yes"
+  },
+  {
+    "name": "SoFi",
+    "ats": "greenhouse",
+    "slug": "sofi",
+    "h1b": "yes"
+  },
+  {
+    "name": "Block",
+    "ats": "greenhouse",
+    "slug": "block",
+    "h1b": "yes"
+  },
+  {
+    "name": "Twilio",
+    "ats": "greenhouse",
+    "slug": "twilio",
+    "h1b": "yes"
+  },
+  {
+    "name": "MongoDB",
+    "ats": "greenhouse",
+    "slug": "mongodb",
+    "h1b": "yes"
+  },
+  {
+    "name": "Cloudflare",
+    "ats": "greenhouse",
+    "slug": "cloudflare",
+    "h1b": "yes"
+  },
+  {
+    "name": "Asana",
+    "ats": "greenhouse",
+    "slug": "asana",
+    "h1b": "yes"
+  },
+  {
+    "name": "Gusto",
+    "ats": "greenhouse",
+    "slug": "gusto",
+    "h1b": "yes"
+  },
+  {
+    "name": "Brex",
+    "ats": "greenhouse",
+    "slug": "brex",
+    "h1b": "yes"
+  },
+  {
+    "name": "Duolingo",
+    "ats": "greenhouse",
+    "slug": "duolingo",
+    "h1b": "yes"
+  },
+  {
+    "name": "Scale AI",
+    "ats": "greenhouse",
+    "slug": "scaleai",
+    "h1b": "yes"
+  },
+  {
+    "name": "OpenAI",
+    "ats": "ashby",
+    "slug": "openai",
+    "h1b": "yes"
+  },
+  {
+    "name": "Snowflake",
+    "ats": "ashby",
+    "slug": "snowflake",
+    "h1b": "yes"
+  },
+  {
+    "name": "Cursor",
+    "ats": "ashby",
+    "slug": "cursor",
+    "h1b": "yes"
+  },
+  {
+    "name": "Linear",
+    "ats": "ashby",
+    "slug": "linear",
+    "h1b": "yes"
+  },
+  {
+    "name": "Palantir",
+    "ats": "lever",
+    "slug": "palantir",
+    "h1b": "yes"
+  },
+  {
+    "name": "Spotify",
+    "ats": "lever",
+    "slug": "spotify",
+    "h1b": "yes"
+  },
+  {
+    "name": "Veeva",
+    "ats": "lever",
+    "slug": "veeva",
+    "h1b": "yes"
+  },
+  {
+    "name": "Zoox",
+    "ats": "lever",
+    "slug": "zoox",
+    "h1b": "yes"
+  },
+  {
+    "name": "Capital One",
+    "ats": "workday",
+    "slug": "capitalone|wd12|Capital_One",
+    "h1b": "yes"
+  },
+  {
+    "name": "Allstate",
+    "ats": "workday",
+    "slug": "allstate|wd5|allstate_careers",
+    "h1b": "yes"
+  },
+  {
+    "name": "Travelers",
+    "ats": "workday",
+    "slug": "travelers|wd5|External",
+    "h1b": "yes"
+  },
+  {
+    "name": "Fidelity",
+    "ats": "workday",
+    "slug": "fmr|wd1|FidelityCareers",
+    "h1b": "yes"
+  },
+  {
+    "name": "Tyson Foods",
+    "ats": "workday",
+    "slug": "tysonfoods|wd5|TSN",
+    "h1b": "yes"
+  },
+  {
+    "name": "NVIDIA",
+    "ats": "workday",
+    "slug": "nvidia|wd5|NVIDIAExternalCareerSite",
+    "h1b": "yes"
+  },
+  {
+    "name": "Salesforce",
+    "ats": "workday",
+    "slug": "salesforce|wd12|External_Career_Site",
+    "h1b": "yes"
   }
 ]

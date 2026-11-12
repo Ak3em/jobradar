@@ -29,7 +29,7 @@
   function build(){
     if (built) return; built = true;
     const seg = document.createElement("div"); seg.className = "seg"; seg.setAttribute("role", "radiogroup"); seg.setAttribute("aria-label", "Sponsorship filter");
-    [["hide", "Hide no-sponsor"], ["yes", "Sponsors + likely"], ["all", "Show all"]].forEach(([v, l]) => {
+    [["hide", "Yes + not stated"], ["yes", "Says it sponsors"], ["all", "Show all"]].forEach(([v, l]) => {
       const b = document.createElement("button"); b.type = "button"; b.setAttribute("role", "radio"); b.dataset.v = v; b.textContent = l;
       b.onclick = () => { $("sp").value = v; $("sp").dispatchEvent(new Event("change")); }; seg.append(b);
     });

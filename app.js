@@ -6,7 +6,7 @@ const P = {
  out:'<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>', dl:'<path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/>', pulse:'<path d="M3 12h4l3-8 4 16 3-8h4"/>',
  warn:'<path d="M12 3 2 21h20zM12 10v5M12 18h.01"/>'};
 const ic = (n, s = 18) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n]}</svg>`;
-const SP = {yes:"Sponsors", likely:"Likely sponsors", unclear:"Sponsorship unclear", no:"Does not sponsor"};
+const SP = {yes:"Sponsors", likely:"Likely sponsors", unclear:"Sponsorship not stated", no:"Does not sponsor"};
 const FAM = {swe:"Software", pm:"Product / Program", ops:"Operations"};
 const TABS = [["feed","Feed","feed"],["saved","Saved","save"],["started","Started","started"],["applied","Applied","applied"],["passed","Passed","passed"]];
 const NOTE = {saved:"Saved for later", started:"Marked as started", applied:"Marked as applied", passed:"Hidden from your feed"};
@@ -77,7 +77,7 @@ function render(){
   $("tabs").querySelectorAll("button").forEach(x => x.onclick = () => { tab = x.dataset.t; render(); scrollTo({top: 0}); });
   const rows = data.jobs.filter(j => matches(j, tab));
   const feed = data.jobs.filter(j => matches(j, "feed"));
-  $("stats").innerHTML = [[feed.length, "new matches"], [feed.filter(j => ["yes","likely"].includes(j.sponsorship.status)).length, "that sponsor or likely sponsor"], [data.jobs.filter(j => status(j) === "applied").length, "applied"]]
+  $("stats").innerHTML = [[feed.length, "new matches"], [feed.filter(j => j.sponsorship.status === "yes").length, "say they sponsor"], [data.jobs.filter(j => status(j) === "applied").length, "applied"]]
     .map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join("");
   $("list").innerHTML = rows.length ? rows.map(card).join("") : `<div class="empty"><b>${EMPTY[tab][0]}</b>${EMPTY[tab][1]}</div>`;
   $("list").querySelectorAll("[data-s]").forEach(x => x.onclick = () => {
