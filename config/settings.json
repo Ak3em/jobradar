@@ -8,29 +8,14 @@
   "max_new_scores_per_run": 40,
   "seconds_between_scores": 20,
   "verify_links": true,
-  "exclude_locations": [
-    "London",
-    "India",
-    "Bangalore",
-    "Bengaluru",
-    "Singapore",
-    "Hong Kong",
-    "Toronto",
-    "Dublin",
-    "Warsaw",
-    "Tokyo",
-    "Sydney",
-    "Berlin",
-    "Paris",
-    "Mumbai",
-    "Hyderabad",
-    "Gurgaon",
-    "Poland",
-    "Canada",
-    "UK",
-    "Ireland",
-    "Germany",
-    "Brazil",
-    "Mexico"
-  ]
+  "region_order": [
+    "TX",
+    "CA",
+    "WA",
+    "NYC",
+    "PA",
+    "Remote US",
+    "Other US"
+  ],
+  "max_resume_chars": 4000
 }
