@@ -3,13 +3,27 @@ on:
   schedule:
     - cron: "0 12 * * *"
   workflow_dispatch:
+  # Saving a resume (or editing config) re-scans right away
+  push:
+    branches: [main]
+    paths:
+      - "config/**"
+      - "scraper/**"
 permissions:
   contents: write
+  issues: write
+  pages: write
+  id-token: write
+concurrency:
+  group: scan
+  cancel-in-progress: false
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -23,4 +37,14 @@ jobs:
           git config user.name "jobradar-bot"
           git config user.email "bot@users.noreply.github.com"
           git add data
-          if ! git diff --cached --quiet; then git commit -m "Update jobs" && git push; fi
+          if ! git diff --cached --quiet; then git commit -m "Update jobs" && git pull --rebase && git push; fi
+      # GitHub emails you about new issues in your own repo, so each strong new match reaches your inbox/phone
+      - name: Alert on new matches
+        if: hashFiles('alerts.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "JobRadar: new matches $(date -u +%F)" --body-file alerts.md --label jobradar || gh issue create --title "JobRadar: new matches $(date -u +%F)" --body-file alerts.md
+  # A push made with GITHUB_TOKEN never triggers other workflows, so deploy from here
+  deploy:
+    needs: scan
+    uses: ./.github/workflows/pages.yml
